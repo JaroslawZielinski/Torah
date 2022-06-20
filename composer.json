@@ -1,0 +1,25 @@
+{
+    "name": "jaroslawzielinski/torah",
+    "description": "Torah Online",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jarosław Zieliński",
+            "email": "jarek.zielinski82@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.3|^8.0",
+        "guzzlehttp/guzzle": "6.5.5",
+        "psr/log": "^1.1",
+        "monolog/monolog": "2.x-dev",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "JaroslawZielinski\\Torah\\": "src/"
+        }
+    }
+}
