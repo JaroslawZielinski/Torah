@@ -54,7 +54,7 @@ in 21 translations via api (GuzzleHttp client) to [biblia.info.pl/api](https://w
 ```shell
 cd YourProject
 composer config repositories.Torah vcs https://github.com/JaroslawZielinski/Torah.git
-composer jaroslawzielinski/torah dev-master
+composer require jaroslawzielinski/torah dev-master
 ```
 
 ### Constants
