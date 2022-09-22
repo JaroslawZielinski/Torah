@@ -18,4 +18,35 @@ class SiglumFactory
         }
         return new Siglum($translation, $book, $chapter, $verseStart, $verseEnd);
     }
+
+    /**
+     * @throws \Exception
+     */
+    public static function createFromTranslationAndString(string $translation, string $abstractSiglum): Siglum
+    {
+        $abstractSiglumArray = explode('/', $abstractSiglum);
+        $book = $abstractSiglumArray[0] ?? null;
+        $chapter = $abstractSiglumArray[1] ?? null;
+        $verses = $abstractSiglumArray[2] ?? null;
+        if (empty($book) || empty($chapter) || empty($verses)) {
+            throw new \Exception('String format is not valid.');
+        }
+        return self::create($translation, $book, $chapter, $verses);
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public static function createFromString(string $siglum): Siglum
+    {
+        $siglumArray = explode('/', $siglum);
+        $translation = $siglumArray[3] ?? null;
+        $book = $siglumArray[0] ?? null;
+        $chapter = $siglumArray[1] ?? null;
+        $verses = $siglumArray[2] ?? null;
+        if (empty($translation) || empty($book) || empty($chapter) || empty($verses)) {
+            throw new \Exception('Siglum format is not valid.');
+        }
+        return self::create($translation, $book, $chapter, $verses);
+    }
 }

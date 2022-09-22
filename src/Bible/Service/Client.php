@@ -40,18 +40,7 @@ class Client
     public function query(Siglum $siglum): Response
     {
         try {
-            if ($siglum->isSingle()) {
-                $verses = sprintf(self::SINGLE_VERSE, $siglum->getVerseStart());
-            } else {
-                $verses = sprintf(self::MULTI_VERSES, $siglum->getVerseStart(), $siglum->getVerseEnd());
-            }
-            $url = sprintf(
-                self::SERVICE_URL,
-                $siglum->getTranslation(),
-                $siglum->getBook(),
-                $siglum->getChapter(),
-                $verses
-            );
+            $url = $this->getServiceUrlBySiglum($siglum);
             /** @var \GuzzleHttp\Psr7\Response $response */
             $response = $this->client->request('GET', $url);
             $this->logger->info($url);
@@ -66,5 +55,21 @@ class Client
     public function getHttpCode(): int
     {
         return $this->httpCode;
+    }
+
+    public function getServiceUrlBySiglum(Siglum $siglum): string
+    {
+        if ($siglum->isSingle()) {
+            $verses = sprintf(self::SINGLE_VERSE, $siglum->getVerseStart());
+        } else {
+            $verses = sprintf(self::MULTI_VERSES, $siglum->getVerseStart(), $siglum->getVerseEnd());
+        }
+        return sprintf(
+            self::SERVICE_URL,
+            $siglum->getTranslation(),
+            $siglum->getBook(),
+            $siglum->getChapter(),
+            $verses
+        );
     }
 }
