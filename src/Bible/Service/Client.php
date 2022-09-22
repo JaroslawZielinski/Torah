@@ -10,7 +10,8 @@ use Psr\Log\LoggerInterface;
 
 class Client
 {
-    private const SERVICE_URL = 'https://www.biblia.info.pl/api/biblia/%s/%s/%s/%s';
+    private const API_SERVICE_URL = 'https://www.biblia.info.pl/api/biblia/%s/%s/%s/%s';
+    private const SERVICE_URL = 'https://www.biblia.info.pl/biblia/%s/%s/%s/%s';
     private const SINGLE_VERSE = '%s';
     private const MULTI_VERSES = '%s-%s';
     /**
@@ -57,7 +58,7 @@ class Client
         return $this->httpCode;
     }
 
-    public function getServiceUrlBySiglum(Siglum $siglum): string
+    private function getServiceUrlBySiglum(Siglum $siglum, string $urlPattern = self::API_SERVICE_URL): string
     {
         if ($siglum->isSingle()) {
             $verses = sprintf(self::SINGLE_VERSE, $siglum->getVerseStart());
@@ -65,11 +66,16 @@ class Client
             $verses = sprintf(self::MULTI_VERSES, $siglum->getVerseStart(), $siglum->getVerseEnd());
         }
         return sprintf(
-            self::SERVICE_URL,
+            $urlPattern,
             $siglum->getTranslation(),
             $siglum->getBook(),
             $siglum->getChapter(),
             $verses
         );
+    }
+
+    public function getUrlBySiglum(Siglum $siglum): string
+    {
+        return $this->getServiceUrlBySiglum($siglum, self::SERVICE_URL);
     }
 }
