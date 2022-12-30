@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.3|^8.0",
-        "guzzlehttp/guzzle": "6.5.5",
+        "guzzlehttp/guzzle": "6.5.8",
         "psr/log": "^1.1",
         "monolog/monolog": "~1.8",
         "ext-json": "*"
