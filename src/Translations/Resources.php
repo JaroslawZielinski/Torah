@@ -720,7 +720,7 @@ abstract class Resources implements
                 '3' => 'Syrach'
             ],
         ],
-        'Neviim Ketuvim' => [
+        'Nevi\'im ketuvim' => [
             self::TORAH_BOOKS_IZ => [
                 'full' => 'Ks. Izajasza',
                 '1' => 'Iz',
