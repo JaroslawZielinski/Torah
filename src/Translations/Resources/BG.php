@@ -86,8 +86,6 @@ class BG extends Resources
                 self::TORAH_BOOKS_RT => [
                     self::CHAPTERS => [
                         '1' => 22, '2' => 23, '3' => 18, '4' => 22
-                    ],
-                    self::EXCEPTIONS => [
                     ]
                 ],
                 self::TORAH_BOOKS_1SM => [

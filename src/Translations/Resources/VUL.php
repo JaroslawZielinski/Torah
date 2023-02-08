@@ -341,10 +341,7 @@ class VUL extends Resources
                         '25' => 46, '26' => 75, '27' => 66, '28' => 20
                     ],
                     self::EXCEPTIONS => [
-                        [
-                            'chapter' => 23,
-                            'verse' => 14
-                        ]
+                        ['chapter' => 23, 'verse' => 14]
                     ]
                 ],
                 self::TORAH_BOOKS_MK => [
@@ -452,10 +449,7 @@ class VUL extends Resources
                         '1' => 16, '2' => 15, '3' => 15
                     ],
                     self::EXCEPTIONS => [
-                        [
-                            'chapter' => 2,
-                            'verse' => 9
-                        ]
+                        ['chapter' => 2, 'verse' => 9]
                     ]
                 ],
                 self::TORAH_BOOKS_FLM => [

@@ -204,8 +204,6 @@ class BB extends Resources
                 self::TORAH_BOOKS_PNP => [
                     self::CHAPTERS => [
                         '1' => 17, '2' => 17, '3' => 11, '4' => 16, '5' => 16, '6' => 13, '7' => 13, '8' => 14
-                    ],
-                    self::EXCEPTIONS => [
                     ]
                 ],
                 self::TORAH_BOOKS_IZ => [

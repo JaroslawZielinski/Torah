@@ -304,7 +304,9 @@ class BP extends Resources
                         '1' => 21, '2' => 49, '3' => 100, '4' => 34, '5' => 30, '6' => 29, '7' => 28, '8' => 27,
                         '9' => 27, '10' => 21, '11' => 45, '12' => 13, '13' => 64, '14' => 42
                     ],
-                    self::EXCEPTIONS => [['chapter' => 14, 'verse' => 14]]
+                    self::EXCEPTIONS => [
+                        ['chapter' => 14, 'verse' => 14]
+                    ]
                 ],
                 self::TORAH_BOOKS_OZ => [
                     self::CHAPTERS => [
