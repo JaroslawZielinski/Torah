@@ -109,6 +109,9 @@ class Torah
         $translationCode = $siglum->getTranslation();
         $translation = $this->getResourceByTranslationCode($translationCode);
         if ($this->isValid($siglum, $translation)) {
+            if (count($this->getErrors()) > 0) {
+                return null;
+            }
             return $translation->get($siglum);
         }
         return null;
