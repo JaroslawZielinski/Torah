@@ -1,6 +1,7 @@
 {
     "name": "jaroslawzielinski/torah",
     "description": "Torah Online",
+    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -9,7 +10,6 @@
             "email": "jarek.zielinski82@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": "^7.3|^8.0",
         "guzzlehttp/guzzle": ">=6.5.5 <8.0",
