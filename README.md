@@ -55,14 +55,6 @@ composer require jaroslawzielinski/torah
 
 ## Developer Guide
 
-### Installation
-
-```shell
-cd YourProject
-composer config repositories.Torah vcs https://github.com/JaroslawZielinski/Torah.git
-composer require jaroslawzielinski/torah dev-master
-```
-
 ### Constants
 
 #### Translations:
