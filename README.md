@@ -8,8 +8,7 @@ in 21 translations via api (GuzzleHttp client) to [biblia.info.pl/api](https://w
 ## How to install via shell
 ```ssh
 cd YourProject
-composer config repositories.Torah vcs https://github.com/JaroslawZielinski/Torah.git
-composer require jaroslawzielinski/torah dev-master
+composer require jaroslawzielinski/torah
 ```
 
 ## Examples
