@@ -6,6 +6,7 @@ This is a PHP 7.3 library that has access to Torah (both Tanakh and Brithadasha 
 in 21 translations via api (GuzzleHttp client) to [biblia.info.pl/api](https://www.biblia.info.pl/api/) service.
 
 ## How to install via shell
+in [packagist](https://packagist.org/packages/jaroslawzielinski/torah)
 ```ssh
 cd YourProject
 composer require jaroslawzielinski/torah
