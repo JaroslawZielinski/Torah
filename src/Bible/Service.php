@@ -24,9 +24,9 @@ class Service implements ServiceInterface
      * {@inheritDoc}
      * @throws \Exception
      */
-    public function get(Siglum $siglum): Text
+    public function get(Siglum $siglum, string $language): Text
     {
-        $response = $this->client->query($siglum);
+        $response = $this->client->query($siglum, $language);
         return $response->getText();
     }
 }

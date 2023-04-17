@@ -91,7 +91,8 @@ abstract class Resources implements
     // books descriptions
     public const TORAH_BOOKS = [
         self::TORAH_BOOKS_RDZ => [
-            'full' => 'Ks. Rodzaju',
+            'pl' => 'Ks. Rodzaju',
+            'en' => 'Genesis',
             '1' => 'Rdz',
             '2' => 'Rodz',
             '3' => 'Gen',
@@ -100,7 +101,8 @@ abstract class Resources implements
             '6' => '1M'
         ],
         self::TORAH_BOOKS_WJ => [
-            'full' => 'Ks. Wyjścia',
+            'pl' => 'Ks. Wyjścia',
+            'en' => 'Exodus',
             '1' => 'Wj',
             '2' => 'Wyj',
             '3' => 'Ex',
@@ -109,7 +111,8 @@ abstract class Resources implements
             '6' => '2M'
         ],
         self::TORAH_BOOKS_KPL => [
-            'full' => 'Ks. Kapłańska',
+            'pl' => 'Ks. Kapłańska',
+            'en' => 'Leviticus',
             '1' => 'Kpł',
             '2' => 'Kpl',
             '3' => 'Kapł',
@@ -120,7 +123,8 @@ abstract class Resources implements
             '8' => '3M'
         ],
         self::TORAH_BOOKS_LB => [
-            'full' => 'Ks. Liczb',
+            'pl' => 'Ks. Liczb',
+            'en' => 'Numbers',
             '1' => 'Lb',
             '2' => 'Num',
             '3' => 'Nu',
@@ -129,7 +133,8 @@ abstract class Resources implements
             '6' => '4M'
         ],
         self::TORAH_BOOKS_PWT => [
-            'full' => 'Ks. Powt.Prawa',
+            'pl' => 'Ks. Powt.Prawa',
+            'en' => 'Deuteronomy',
             '1' => 'Pwt',
             '2' => 'Deu',
             '3' => 'Dt',
@@ -138,152 +143,178 @@ abstract class Resources implements
             '6' => '5M'
         ],
         self::TORAH_BOOKS_JOZ => [
-            'full' => 'Ks. Jozuego',
+            'pl' => 'Ks. Jozuego',
+            'en' => 'Joshua',
             '1' => 'Joz',
             '2' => 'Jos'
         ],
         self::TORAH_BOOKS_SDZ => [
-            'full' => 'Ks. Sędziów',
+            'pl' => 'Ks. Sędziów',
+            'en' => 'Judges',
             '1' => 'Sdz',
             '2' => 'Sędz',
             '3' => 'Sedz',
             '4' => 'Jdg'
         ],
         self::TORAH_BOOKS_RT => [
-            'full' => 'Ks. Rut',
+            'pl' => 'Ks. Rut',
+            'en' => 'Ruth',
             '1' => 'Rt',
             '2' => 'Rut',
             '3' => 'Ru'
         ],
         self::TORAH_BOOKS_1SM => [
-            'full' => '1 Ks. Samuela',
+            'pl' => '1 Ks. Samuela',
+            'en' => '1 Samuel',
             '1' => '1Sm',
             '2' => '1Sam',
             '3' => '1Sa'
         ],
         self::TORAH_BOOKS_2SM => [
-            'full' => '2 Ks. Samuela',
+            'pl' => '2 Ks. Samuela',
+            'en' => '2 Samuel',
             '1' => '2Sm',
             '2' => '2Sam',
             '3' => '2Sa'
         ],
         self::TORAH_BOOKS_1KRL => [
-            'full' => '1 Ks. Królewska',
+            'pl' => '1 Ks. Królewska',
+            'en' => '1 Kings',
             '1' => '1Krl',
             '2' => '1Król',
             '3' => '1Krol',
             '4' => '1Ki'
         ],
         self::TORAH_BOOKS_2KRL => [
-            'full' => '2 Ks. Królewska',
+            'pl' => '2 Ks. Królewska',
+            'en' => '2 Kings',
             '1' => '2Krl',
             '2' => '2Król',
             '3' => '2Krol',
             '4' => '2Ki'
         ],
         self::TORAH_BOOKS_1KRN => [
-            'full' => '1 Ks. Kronik',
+            'pl' => '1 Ks. Kronik',
+            'en' => '1 Chronicles',
             '1' => '1Krn',
             '2' => '1Kron',
             '3' => '1Ch'
         ],
         self::TORAH_BOOKS_2KRN => [
-            'full' => '2 Ks. Kronik',
+            'pl' => '2 Ks. Kronik',
+            'en' => '2 Chronicles',
             '1' => '2Krn',
             '2' => '2Kron',
             '3' => '2Ch'
         ],
         self::TORAH_BOOKS_EZD => [
-            'full' => 'Ks. Ezdrasza',
+            'pl' => 'Ks. Ezdrasza',
+            'en' => 'Ezra',
             '1' => 'Ezd',
             '2' => 'Ezdr',
             '3' => 'Ezr'
         ],
         self::TORAH_BOOKS_NE => [
-            'full' => 'Ks. Nehemiasza',
+            'pl' => 'Ks. Nehemiasza',
+            'en' => 'Nehemiah',
             '1' => 'Ne',
             '2' => 'Neh'
         ],
         self::TORAH_BOOKS_TB => [
-            'full' => 'Ks. Tobiasza (w)',
+            'pl' => 'Ks. Tobiasza (w)',
+            'en' => 'Tobit',
             '1' => 'Tb',
             '2' => 'Tob'
         ],
         self::TORAH_BOOKS_JDT => [
-            'full' => 'Ks. Judyty (w)',
+            'pl' => 'Ks. Judyty (w)',
+            'en' => 'Judith',
             '1' => 'Jdt',
             '2' => 'Judyty'
         ],
         self::TORAH_BOOKS_EST => [
-            'full' => 'Ks. Estery',
+            'pl' => 'Ks. Estery',
+            'en' => 'Esther',
             '1' => 'Est',
             '2' => 'Estery'
         ],
         self::TORAH_BOOKS_1MCH => [
-            'full' => '1 Ks. Machabejska (w)',
+            'pl' => '1 Ks. Machabejska (w)',
+            'en' => '1 Maccabees',
             '1' => '1Mch',
             '2' => '1Mach'
         ],
         self::TORAH_BOOKS_2MCH => [
-            'full' => '2 Ks. Machabejska (w)',
+            'pl' => '2 Ks. Machabejska (w)',
+            'en' => '2 Maccabees',
             '1' => '2Mch',
             '2' => '2Mach'
         ],
         self::TORAH_BOOKS_HI => [
-            'full' => 'Ks. Hioba',
+            'pl' => 'Ks. Hioba',
+            'en' => 'Job',
             '1' => 'Job',
             '2' => 'Hioba',
             '3' => 'Hiob',
             '4' => 'Hi'
         ],
         self::TORAH_BOOKS_PS => [
-            'full' => 'Ks. Psalmów',
+            'pl' => 'Ks. Psalmów',
+            'en' => 'Psalms',
             '1' => 'Ps',
             '2' => 'Psalmy',
             '3' => 'Psalm'
         ],
         self::TORAH_BOOKS_PRZ => [
-            'full' => 'Ks. Przysłów',
+            'pl' => 'Ks. Przysłów',
+            'en' => 'Proverbs',
             '1' => 'Prz',
             '2' => 'Przy',
             '3' => 'Pr'
         ],
         self::TORAH_BOOKS_KOH => [
-            'full' => 'Ks. Koheleta',
+            'pl' => 'Ks. Koheleta',
+            'en' => 'Ecclesiastes',
             '1' => 'Koh',
             '2' => 'Kohelet',
             '3' => 'Ekl',
             '4' => 'Ecc'
         ],
         self::TORAH_BOOKS_PNP => [
-            'full' => 'Pieśń nad pieśniami',
+            'pl' => 'Pieśń nad pieśniami',
+            'en' => 'Song of Songs',
             '1' => 'PNP',
             '2' => 'SS'
         ],
         self::TORAH_BOOKS_MDR => [
-            'full' => 'Ks. Mądrości (w)',
+            'pl' => 'Ks. Mądrości (w)',
+            'en' => 'Wisdom',
             '1' => 'Mdr',
             '2' => 'Mądr',
             '3' => 'Madr'
         ],
         self::TORAH_BOOKS_SYR => [
-            'full' => 'Mądrość Syracha (w)',
+            'pl' => 'Mądrość Syracha (w)',
+            'en' => 'Sirach',
             '1' => 'Syr',
             '2' => 'Syracha',
             '3' => 'Syrach'
         ],
         self::TORAH_BOOKS_IZ => [
-            'full' => 'Ks. Izajasza',
+            'pl' => 'Ks. Izajasza',
+            'en' => 'Isaiah',
             '1' => 'Iz',
             '2' => 'Isa'
         ],
         self::TORAH_BOOKS_JR => [
-            'full' => 'Ks. Jeremiasza',
+            'pl' => 'Ks. Jeremiasza',
+            'en' => 'Jeremiah',
             '1' => 'Jr',
             '2' => 'Jer'
         ],
         self::TORAH_BOOKS_LM => [
-            'full' => 'Lamentacje Jeremiasza',
+            'pl' => 'Lamentacje Jeremiasza',
+            'en' => 'Lamentations',
             '1' => 'Lm',
             '2' => 'Lam',
             '3' => 'Tr',
@@ -291,244 +322,286 @@ abstract class Resources implements
             '5' => 'La'
         ],
         self::TORAH_BOOKS_BA => [
-            'full' => 'Ks. Barucha (w)',
+            'pl' => 'Ks. Barucha (w)',
+            'en' => 'Baruch',
             '1' => 'Ba',
             '2' => 'Barucha',
             '3' => 'Bar'
         ],
         self::TORAH_BOOKS_EZ => [
-            'full' => 'Ks. Ezechiela',
+            'pl' => 'Ks. Ezechiela',
+            'en' => 'Ezekiel',
             '1' => 'Ez',
             '2' => 'Eze'
         ],
         self::TORAH_BOOKS_DN => [
-            'full' => 'Ks. Daniela',
+            'pl' => 'Ks. Daniela',
+            'en' => 'Daniel',
             '1' => 'Dn',
             '2' => 'Dan',
             '3' => 'Da'
         ],
         self::TORAH_BOOKS_OZ => [
-            'full' => 'Ks. Ozeasza',
+            'pl' => 'Ks. Ozeasza',
+            'en' => 'Hosea',
             '1' => 'Oz',
             '2' => 'Hos'
         ],
         self::TORAH_BOOKS_JL => [
-            'full' => 'Ks. Joela',
+            'pl' => 'Ks. Joela',
+            'en' => 'Joel',
             '1' => 'Jl',
             '2' => 'Joel'
         ],
         self::TORAH_BOOKS_AM => [
-            'full' => 'Ks. Amosa',
+            'pl' => 'Ks. Amosa',
+            'en' => 'Amos',
             '1' => 'Am',
             '2' => 'Amos'
         ],
         self::TORAH_BOOKS_AB => [
-            'full' => 'Ks. Abdiasza',
+            'pl' => 'Ks. Abdiasza',
+            'en' => 'Obadiah',
             '1' => 'Ab',
             '2' => 'Ob'
         ],
         self::TORAH_BOOKS_JON => [
-            'full' => 'Ks. Jonasza',
+            'pl' => 'Ks. Jonasza',
+            'en' => 'Jonah',
             '1' => 'Jon',
             '2' => 'Jnh'
         ],
         self::TORAH_BOOKS_MI => [
-            'full' => 'Ks. Micheasza',
+            'pl' => 'Ks. Micheasza',
+            'en' => 'Micah',
             '1' => 'Mi',
             '2' => 'Mich',
             '3' => 'Mic'
         ],
         self::TORAH_BOOKS_NA => [
-            'full' => 'Ks. Nahuma',
+            'pl' => 'Ks. Nahuma',
+            'en' => 'Nahum',
             '1' => 'Na',
             '2' => 'Nach'
         ],
         self::TORAH_BOOKS_HA => [
-            'full' => 'Ks. Habakuka',
+            'pl' => 'Ks. Habakuka',
+            'en' => 'Habakkuk',
             '1' => 'Hab'
         ],
         self::TORAH_BOOKS_SO => [
-            'full' => 'Ks. Sofoniasza',
+            'pl' => 'Ks. Sofoniasza',
+            'en' => 'Zephaniah',
             '1' => 'So',
             '2' => 'Sof',
             '3' => 'Zep'
         ],
         self::TORAH_BOOKS_AG => [
-            'full' => 'Ks. Aggeusza',
+            'pl' => 'Ks. Aggeusza',
+            'en' => 'Haggai',
             '1' => 'Ag',
             '2' => 'Hag'
         ],
         self::TORAH_BOOKS_ZA => [
-            'full' => 'Ks. Zachariasza',
+            'pl' => 'Ks. Zachariasza',
+            'en' => 'Zechariah',
             '1' => 'Za',
             '2' => 'Zach',
             '3' => 'Zec'
         ],
         self::TORAH_BOOKS_ML => [
-            'full' => 'Ks. Malachiasza',
+            'pl' => 'Ks. Malachiasza',
+            'en' => 'Malachi',
             '1' => 'Ml',
             '2' => 'Mal'
         ],
         self::TORAH_BOOKS_MT => [
-            'full' => 'Ew. Mateusza',
+            'pl' => 'Ew. Mateusza',
+            'en' => 'Matthew',
             '1' => 'Mt',
             '2' => '',
             '3' => 'Mat'
         ],
         self::TORAH_BOOKS_MK => [
-            'full' => 'Ew. Marka',
+            'pl' => 'Ew. Marka',
+            'en' => 'Mark',
             '1' => 'Mk',
             '2' => '',
             '3' => 'Mar'
         ],
         self::TORAH_BOOKS_LK => [
-            'full' => 'Ew. Łukasza',
+            'pl' => 'Ew. Łukasza',
+            'en' => 'Luke',
             '1' => 'Łk',
             '2' => 'Łuk',
             '3' => 'Lk',
             '4' => 'Luk'
         ],
         self::TORAH_BOOKS_J => [
-            'full' => 'Ew. Jana',
+            'pl' => 'Ew. Jana',
+            'en' => 'John',
             '1' => 'Jan',
             '2' => 'J',
             '3' => 'Jn'
         ],
         self::TORAH_BOOKS_DZ => [
-            'full' => 'Dzieje Apost.',
+            'pl' => 'Dzieje Apost.',
+            'en' => 'Acts',
             '1' => 'Dz',
             '2' => 'Act',
             '3' => 'Ac'
         ],
         self::TORAH_BOOKS_RZ => [
-            'full' => 'List do Rzymian',
+            'pl' => 'List do Rzymian',
+            'en' => 'Romans',
             '1' => 'Rz',
             '2' => 'Rzym',
             '3' => 'Ro'
         ],
         self::TORAH_BOOKS_1KOR => [
-            'full' => '1 list do Koryntian',
+            'pl' => '1 list do Koryntian',
+            'en' => '1 Corinthians',
             '1' => '1Kor',
             '2' => '',
             '3' => '1Co'
         ],
         self::TORAH_BOOKS_2KOR => [
-            'full' => '2 list do Koryntian',
+            'pl' => '2 list do Koryntian',
+            'en' => '2 Corinthians',
             '1' => '2Kor',
             '2' => '',
             '3' => '2Co'
         ],
         self::TORAH_BOOKS_GA => [
-            'full' => 'List do Galatów',
+            'pl' => 'List do Galatów',
+            'en' => 'Galatians',
             '1' => 'Ga',
             '2' => '',
             '3' => 'Gal'
         ],
         self::TORAH_BOOKS_EF => [
-            'full' => 'List do Efezjan',
+            'pl' => 'List do Efezjan',
+            'en' => 'Ephesians',
             '1' => 'Ef',
             '2' => 'Efez',
             '3' => 'Eph'
         ],
         self::TORAH_BOOKS_FLP => [
-            'full' => 'List do Filipian',
+            'pl' => 'List do Filipian',
+            'en' => 'Philippians',
             '1' => 'Flp',
             '2' => 'Fil',
             '3' => 'Fl',
             '4' => 'Php'
         ],
         self::TORAH_BOOKS_KOL => [
-            'full' => 'List do Kolosan',
+            'pl' => 'List do Kolosan',
+            'en' => 'Colossians',
             '1' => 'Kol',
             '2' => '',
             '3' => 'Col'
         ],
         self::TORAH_BOOKS_1TES => [
-            'full' => '1 List do Tesaloniczan',
+            'pl' => '1 List do Tesaloniczan',
+            'en' => '1 Thessalonians',
             '1' => '1Tes',
             '2' => '',
             '3' => '1Th'
         ],
         self::TORAH_BOOKS_2TES => [
-            'full' => '2 List do Tesaloniczan',
+            'pl' => '2 List do Tesaloniczan',
+            'en' => '2 Thessalonians',
             '1' => '2Tes',
             '2' => '',
             '3' => '2Th'
         ],
         self::TORAH_BOOKS_1TM => [
-            'full' => '1 List do Tymoteusza',
+            'pl' => '1 List do Tymoteusza',
+            'en' => '1 Timothy',
             '1' => '1Tm',
             '2' => '1Tym',
             '3' => '1Ti'
         ],
         self::TORAH_BOOKS_2TM => [
-            'full' => '2 List do Tymoteusza',
+            'pl' => '2 List do Tymoteusza',
+            'en' => '2 Timothy',
             '1' => '2Tm',
             '2' => '2Tym',
             '3' => '2Ti'
         ],
         self::TORAH_BOOKS_TT => [
-            'full' => 'List do Tytusa',
+            'pl' => 'List do Tytusa',
+            'en' => 'Titus',
             '1' => 'Tt',
             '2' => 'Tyt',
             '3' => 'Tit'
         ],
         self::TORAH_BOOKS_FLM => [
-            'full' => 'List do Filemona',
+            'pl' => 'List do Filemona',
+            'en' => 'Philemon',
             '1' => 'Flm',
             '2' => 'Filem',
             '3' => 'Phm'
         ],
         self::TORAH_BOOKS_HBR => [
-            'full' => 'List do Hebrajczyków',
+            'pl' => 'List do Hebrajczyków',
+            'en' => 'Hebrews',
             '1' => 'Hbr',
             '2' => 'Heb',
             '3' => 'Hebr'
         ],
         self::TORAH_BOOKS_JK => [
-            'full' => 'List Jakuba',
+            'pl' => 'List Jakuba',
+            'en' => 'James',
             '1' => 'Jk',
             '2' => 'Jak',
             '3' => 'Jas'
         ],
         self::TORAH_BOOKS_1P => [
-            'full' => '1 List Piotra',
+            'pl' => '1 List Piotra',
+            'en' => '1 Peter',
             '1' => '1P',
             '2' => '',
             '3' => '1Pe'
         ],
         self::TORAH_BOOKS_2P => [
-            'full' => '2 List Piotra',
+            'pl' => '2 List Piotra',
+            'en' => '2 Peter',
             '1' => '2P',
             '2' => '',
             '3' => '2Pe'
         ],
         self::TORAH_BOOKS_1J => [
-            'full' => '1 List Jana',
+            'pl' => '1 List Jana',
+            'en' => '1 John',
             '1' => '1J',
             '2' => '',
             '3' => '1Jn'
         ],
         self::TORAH_BOOKS_2J => [
-            'full' => '2 List Jana',
+            'pl' => '2 List Jana',
+            'en' => '2 John',
             '1' => '2J',
             '2' => '',
             '3' => '1Jn'
         ],
         self::TORAH_BOOKS_3J => [
-            'full' => '3 List Jana',
+            'pl' => '3 List Jana',
+            'en' => '3 John',
             '1' => '3J',
             '2' => '',
             '3' => '3Jn'
         ],
         self::TORAH_BOOKS_JUD => [
-            'full' => 'List Judy',
+            'pl' => 'List Judy',
+            'en' => 'Jude',
             '1' => 'Jud',
             '2' => 'Judy',
             '3' => 'Jude'
         ],
         self::TORAH_BOOKS_AP => [
-            'full' => 'Apokalipsa (Objawienie)',
+            'pl' => 'Apokalipsa (Objawienie)',
+            'en' => 'Revelation',
             '1' => 'Ap',
             '2' => 'Ap',
             '3' => 'Obj',
@@ -537,454 +610,83 @@ abstract class Resources implements
     ];
     public const TORAH_BOOKS_EXTENDED = [
         'Tanakh' => [
-            self::TORAH_BOOKS_RDZ => [
-                'full' => 'Ks. Rodzaju',
-                '1' => 'Rdz',
-                '2' => 'Rodz',
-                '3' => 'Gen',
-                '4' => 'IMoj',
-                '5' => '1Moj',
-                '6' => '1M'
-            ],
-            self::TORAH_BOOKS_WJ => [
-                'full' => 'Ks. Wyjścia',
-                '1' => 'Wj',
-                '2' => 'Wyj',
-                '3' => 'Ex',
-                '4' => 'IIMoj',
-                '5' => '2Moj',
-                '6' => '2M'
-            ],
-            self::TORAH_BOOKS_KPL => [
-                'full' => 'Ks. Kapłańska',
-                '1' => 'Kpł',
-                '2' => 'Kpl',
-                '3' => 'Kapł',
-                '4' => 'Kapl',
-                '5' => 'Lev',
-                '6' => 'IIIMoj',
-                '7' => '3Moj',
-                '8' => '3M'
-            ],
-            self::TORAH_BOOKS_LB => [
-                'full' => 'Ks. Liczb',
-                '1' => 'Lb',
-                '2' => 'Num',
-                '3' => 'Nu',
-                '4' => 'IVMoj',
-                '5' => '4Moj',
-                '6' => '4M'
-            ],
-            self::TORAH_BOOKS_PWT => [
-                'full' => 'Ks. Powt.Prawa',
-                '1' => 'Pwt',
-                '2' => 'Deu',
-                '3' => 'Dt',
-                '4' => 'VMoj',
-                '5' => '5Moj',
-                '6' => '5M'
-            ],
-            self::TORAH_BOOKS_JOZ => [
-                'full' => 'Ks. Jozuego',
-                '1' => 'Joz',
-                '2' => 'Jos'
-            ],
-            self::TORAH_BOOKS_SDZ => [
-                'full' => 'Ks. Sędziów',
-                '1' => 'Sdz',
-                '2' => 'Sędz',
-                '3' => 'Sedz',
-                '4' => 'Jdg'
-            ],
-            self::TORAH_BOOKS_RT => [
-                'full' => 'Ks. Rut',
-                '1' => 'Rt',
-                '2' => 'Rut',
-                '3' => 'Ru'
-            ],
-            self::TORAH_BOOKS_1SM => [
-                'full' => '1 Ks. Samuela',
-                '1' => '1Sm',
-                '2' => '1Sam',
-                '3' => '1Sa'
-            ],
-            self::TORAH_BOOKS_2SM => [
-                'full' => '2 Ks. Samuela',
-                '1' => '2Sm',
-                '2' => '2Sam',
-                '3' => '2Sa'
-            ],
-            self::TORAH_BOOKS_1KRL => [
-                'full' => '1 Ks. Królewska',
-                '1' => '1Krl',
-                '2' => '1Król',
-                '3' => '1Krol',
-                '4' => '1Ki'
-            ],
-            self::TORAH_BOOKS_2KRL => [
-                'full' => '2 Ks. Królewska',
-                '1' => '2Krl',
-                '2' => '2Król',
-                '3' => '2Krol',
-                '4' => '2Ki'
-            ],
-            self::TORAH_BOOKS_1KRN => [
-                'full' => '1 Ks. Kronik',
-                '1' => '1Krn',
-                '2' => '1Kron',
-                '3' => '1Ch'
-            ],
-            self::TORAH_BOOKS_2KRN => [
-                'full' => '2 Ks. Kronik',
-                '1' => '2Krn',
-                '2' => '2Kron',
-                '3' => '2Ch'
-            ],
-            self::TORAH_BOOKS_EZD => [
-                'full' => 'Ks. Ezdrasza',
-                '1' => 'Ezd',
-                '2' => 'Ezdr',
-                '3' => 'Ezr'
-            ],
-            self::TORAH_BOOKS_NE => [
-                'full' => 'Ks. Nehemiasza',
-                '1' => 'Ne',
-                '2' => 'Neh'
-            ],
-            self::TORAH_BOOKS_TB => [
-                'full' => 'Ks. Tobiasza (w)',
-                '1' => 'Tb',
-                '2' => 'Tob'
-            ],
-            self::TORAH_BOOKS_JDT => [
-                'full' => 'Ks. Judyty (w)',
-                '1' => 'Jdt',
-                '2' => 'Judyty'
-            ],
-            self::TORAH_BOOKS_EST => [
-                'full' => 'Ks. Estery',
-                '1' => 'Est',
-                '2' => 'Estery'
-            ],
-            self::TORAH_BOOKS_1MCH => [
-                'full' => '1 Ks. Machabejska (w)',
-                '1' => '1Mch',
-                '2' => '1Mach'
-            ],
-            self::TORAH_BOOKS_2MCH => [
-                'full' => '2 Ks. Machabejska (w)',
-                '1' => '2Mch',
-                '2' => '2Mach'
-            ],
-            self::TORAH_BOOKS_HI => [
-                'full' => 'Ks. Hioba',
-                '1' => 'Job',
-                '2' => 'Hioba',
-                '3' => 'Hiob',
-                '4' => 'Hi'
-            ],
-            self::TORAH_BOOKS_PS => [
-                'full' => 'Ks. Psalmów',
-                '1' => 'Ps',
-                '2' => 'Psalmy',
-                '3' => 'Psalm'
-            ],
-            self::TORAH_BOOKS_PRZ => [
-                'full' => 'Ks. Przysłów',
-                '1' => 'Prz',
-                '2' => 'Przy',
-                '3' => 'Pr'
-            ],
-            self::TORAH_BOOKS_KOH => [
-                'full' => 'Ks. Koheleta',
-                '1' => 'Koh',
-                '2' => 'Kohelet',
-                '3' => 'Ekl',
-                '4' => 'Ecc'
-            ],
-            self::TORAH_BOOKS_PNP => [
-                'full' => 'Pieśń nad pieśniami',
-                '1' => 'PNP',
-                '2' => 'SS'
-            ],
-            self::TORAH_BOOKS_MDR => [
-                'full' => 'Ks. Mądrości (w)',
-                '1' => 'Mdr',
-                '2' => 'Mądr',
-                '3' => 'Madr'
-            ],
-            self::TORAH_BOOKS_SYR => [
-                'full' => 'Mądrość Syracha (w)',
-                '1' => 'Syr',
-                '2' => 'Syracha',
-                '3' => 'Syrach'
-            ],
+            self::TORAH_BOOKS_RDZ => self::TORAH_BOOKS[self::TORAH_BOOKS_RDZ],
+            self::TORAH_BOOKS_WJ => self::TORAH_BOOKS[self::TORAH_BOOKS_WJ],
+            self::TORAH_BOOKS_KPL => self::TORAH_BOOKS[self::TORAH_BOOKS_KPL],
+            self::TORAH_BOOKS_LB => self::TORAH_BOOKS[self::TORAH_BOOKS_LB],
+            self::TORAH_BOOKS_PWT => self::TORAH_BOOKS[self::TORAH_BOOKS_PWT],
+            self::TORAH_BOOKS_JOZ => self::TORAH_BOOKS[self::TORAH_BOOKS_JOZ],
+            self::TORAH_BOOKS_SDZ => self::TORAH_BOOKS[self::TORAH_BOOKS_SDZ],
+            self::TORAH_BOOKS_RT => self::TORAH_BOOKS[self::TORAH_BOOKS_RT],
+            self::TORAH_BOOKS_1SM => self::TORAH_BOOKS[self::TORAH_BOOKS_1SM],
+            self::TORAH_BOOKS_2SM => self::TORAH_BOOKS[self::TORAH_BOOKS_2SM],
+            self::TORAH_BOOKS_1KRL => self::TORAH_BOOKS[self::TORAH_BOOKS_1KRL],
+            self::TORAH_BOOKS_2KRL => self::TORAH_BOOKS[self::TORAH_BOOKS_2KRL],
+            self::TORAH_BOOKS_1KRN => self::TORAH_BOOKS[self::TORAH_BOOKS_1KRN],
+            self::TORAH_BOOKS_2KRN => self::TORAH_BOOKS[self::TORAH_BOOKS_2KRN],
+            self::TORAH_BOOKS_EZD => self::TORAH_BOOKS[self::TORAH_BOOKS_EZD],
+            self::TORAH_BOOKS_NE => self::TORAH_BOOKS[self::TORAH_BOOKS_NE],
+            self::TORAH_BOOKS_TB => self::TORAH_BOOKS[self::TORAH_BOOKS_TB],
+            self::TORAH_BOOKS_JDT => self::TORAH_BOOKS[self::TORAH_BOOKS_JDT],
+            self::TORAH_BOOKS_EST => self::TORAH_BOOKS[self::TORAH_BOOKS_EST],
+            self::TORAH_BOOKS_1MCH => self::TORAH_BOOKS[self::TORAH_BOOKS_1MCH],
+            self::TORAH_BOOKS_2MCH => self::TORAH_BOOKS[self::TORAH_BOOKS_2MCH],
+            self::TORAH_BOOKS_HI => self::TORAH_BOOKS[self::TORAH_BOOKS_HI],
+            self::TORAH_BOOKS_PS => self::TORAH_BOOKS[self::TORAH_BOOKS_PS],
+            self::TORAH_BOOKS_PRZ => self::TORAH_BOOKS[self::TORAH_BOOKS_PRZ],
+            self::TORAH_BOOKS_KOH => self::TORAH_BOOKS[self::TORAH_BOOKS_KOH],
+            self::TORAH_BOOKS_PNP => self::TORAH_BOOKS[self::TORAH_BOOKS_PNP],
+            self::TORAH_BOOKS_MDR => self::TORAH_BOOKS[self::TORAH_BOOKS_MDR],
+            self::TORAH_BOOKS_SYR => self::TORAH_BOOKS[self::TORAH_BOOKS_SYR],
         ],
         'Nevi\'im ketuvim' => [
-            self::TORAH_BOOKS_IZ => [
-                'full' => 'Ks. Izajasza',
-                '1' => 'Iz',
-                '2' => 'Isa'
-            ],
-            self::TORAH_BOOKS_JR => [
-                'full' => 'Ks. Jeremiasza',
-                '1' => 'Jr',
-                '2' => 'Jer'
-            ],
-            self::TORAH_BOOKS_LM => [
-                'full' => 'Lamentacje Jeremiasza',
-                '1' => 'Lm',
-                '2' => 'Lam',
-                '3' => 'Tr',
-                '4' => 'Treny',
-                '5' => 'La'
-            ],
-            self::TORAH_BOOKS_BA => [
-                'full' => 'Ks. Barucha (w)',
-                '1' => 'Ba',
-                '2' => 'Barucha',
-                '3' => 'Bar'
-            ],
-            self::TORAH_BOOKS_EZ => [
-                'full' => 'Ks. Ezechiela',
-                '1' => 'Ez',
-                '2' => 'Eze'
-            ],
-            self::TORAH_BOOKS_DN => [
-                'full' => 'Ks. Daniela',
-                '1' => 'Dn',
-                '2' => 'Dan',
-                '3' => 'Da'
-            ],
-            self::TORAH_BOOKS_OZ => [
-                'full' => 'Ks. Ozeasza',
-                '1' => 'Oz',
-                '2' => 'Hos'
-            ],
-            self::TORAH_BOOKS_JL => [
-                'full' => 'Ks. Joela',
-                '1' => 'Jl',
-                '2' => 'Joel'
-            ],
-            self::TORAH_BOOKS_AM => [
-                'full' => 'Ks. Amosa',
-                '1' => 'Am',
-                '2' => 'Amos'
-            ],
-            self::TORAH_BOOKS_AB => [
-                'full' => 'Ks. Abdiasza',
-                '1' => 'Ab',
-                '2' => 'Ob'
-            ],
-            self::TORAH_BOOKS_JON => [
-                'full' => 'Ks. Jonasza',
-                '1' => 'Jon',
-                '2' => 'Jnh'
-            ],
-            self::TORAH_BOOKS_MI => [
-                'full' => 'Ks. Micheasza',
-                '1' => 'Mi',
-                '2' => 'Mich',
-                '3' => 'Mic'
-            ],
-            self::TORAH_BOOKS_NA => [
-                'full' => 'Ks. Nahuma',
-                '1' => 'Na',
-                '2' => 'Nach'
-            ],
-            self::TORAH_BOOKS_HA => [
-                'full' => 'Ks. Habakuka',
-                '1' => 'Hab'
-            ],
-            self::TORAH_BOOKS_SO => [
-                'full' => 'Ks. Sofoniasza',
-                '1' => 'So',
-                '2' => 'Sof',
-                '3' => 'Zep'
-            ],
-            self::TORAH_BOOKS_AG => [
-                'full' => 'Ks. Aggeusza',
-                '1' => 'Ag',
-                '2' => 'Hag'
-            ],
-            self::TORAH_BOOKS_ZA => [
-                'full' => 'Ks. Zachariasza',
-                '1' => 'Za',
-                '2' => 'Zach',
-                '3' => 'Zec'
-            ],
-            self::TORAH_BOOKS_ML => [
-                'full' => 'Ks. Malachiasza',
-                '1' => 'Ml',
-                '2' => 'Mal'
-            ],
+            self::TORAH_BOOKS_IZ => self::TORAH_BOOKS[self::TORAH_BOOKS_IZ],
+            self::TORAH_BOOKS_JR => self::TORAH_BOOKS[self::TORAH_BOOKS_JR],
+            self::TORAH_BOOKS_LM => self::TORAH_BOOKS[self::TORAH_BOOKS_LM],
+            self::TORAH_BOOKS_BA => self::TORAH_BOOKS[self::TORAH_BOOKS_BA],
+            self::TORAH_BOOKS_EZ => self::TORAH_BOOKS[self::TORAH_BOOKS_EZ],
+            self::TORAH_BOOKS_DN => self::TORAH_BOOKS[self::TORAH_BOOKS_DN],
+            self::TORAH_BOOKS_OZ => self::TORAH_BOOKS[self::TORAH_BOOKS_OZ],
+            self::TORAH_BOOKS_JL => self::TORAH_BOOKS[self::TORAH_BOOKS_JL],
+            self::TORAH_BOOKS_AM => self::TORAH_BOOKS[self::TORAH_BOOKS_AM],
+            self::TORAH_BOOKS_AB => self::TORAH_BOOKS[self::TORAH_BOOKS_AB],
+            self::TORAH_BOOKS_JON => self::TORAH_BOOKS[self::TORAH_BOOKS_JON],
+            self::TORAH_BOOKS_MI => self::TORAH_BOOKS[self::TORAH_BOOKS_MI],
+            self::TORAH_BOOKS_NA => self::TORAH_BOOKS[self::TORAH_BOOKS_NA],
+            self::TORAH_BOOKS_HA => self::TORAH_BOOKS[self::TORAH_BOOKS_HA],
+            self::TORAH_BOOKS_SO => self::TORAH_BOOKS[self::TORAH_BOOKS_SO],
+            self::TORAH_BOOKS_AG => self::TORAH_BOOKS[self::TORAH_BOOKS_AG],
+            self::TORAH_BOOKS_ZA => self::TORAH_BOOKS[self::TORAH_BOOKS_ZA],
+            self::TORAH_BOOKS_ML => self::TORAH_BOOKS[self::TORAH_BOOKS_ML],
         ],
         'Brit Hadasha' => [
-            self::TORAH_BOOKS_MT => [
-                'full' => 'Ew. Mateusza',
-                '1' => 'Mt',
-                '2' => '',
-                '3' => 'Mat'
-            ],
-            self::TORAH_BOOKS_MK => [
-                'full' => 'Ew. Marka',
-                '1' => 'Mk',
-                '2' => '',
-                '3' => 'Mar'
-            ],
-            self::TORAH_BOOKS_LK => [
-                'full' => 'Ew. Łukasza',
-                '1' => 'Łk',
-                '2' => 'Łuk',
-                '3' => 'Lk',
-                '4' => 'Luk'
-            ],
-            self::TORAH_BOOKS_J => [
-                'full' => 'Ew. Jana',
-                '1' => 'Jan',
-                '2' => 'J',
-                '3' => 'Jn'
-            ],
-            self::TORAH_BOOKS_DZ => [
-                'full' => 'Dzieje Apost.',
-                '1' => 'Dz',
-                '2' => 'Act',
-                '3' => 'Ac'
-            ],
-            self::TORAH_BOOKS_RZ => [
-                'full' => 'List do Rzymian',
-                '1' => 'Rz',
-                '2' => 'Rzym',
-                '3' => 'Ro'
-            ],
-            self::TORAH_BOOKS_1KOR => [
-                'full' => '1 list do Koryntian',
-                '1' => '1Kor',
-                '2' => '',
-                '3' => '1Co'
-            ],
-            self::TORAH_BOOKS_2KOR => [
-                'full' => '2 list do Koryntian',
-                '1' => '2Kor',
-                '2' => '',
-                '3' => '2Co'
-            ],
-            self::TORAH_BOOKS_GA => [
-                'full' => 'List do Galatów',
-                '1' => 'Ga',
-                '2' => '',
-                '3' => 'Gal'
-            ],
-            self::TORAH_BOOKS_EF => [
-                'full' => 'List do Efezjan',
-                '1' => 'Ef',
-                '2' => 'Efez',
-                '3' => 'Eph'
-            ],
-            self::TORAH_BOOKS_FLP => [
-                'full' => 'List do Filipian',
-                '1' => 'Flp',
-                '2' => 'Fil',
-                '3' => 'Fl',
-                '4' => 'Php'
-            ],
-            self::TORAH_BOOKS_KOL => [
-                'full' => 'List do Kolosan',
-                '1' => 'Kol',
-                '2' => '',
-                '3' => 'Col'
-            ],
-            self::TORAH_BOOKS_1TES => [
-                'full' => '1 List do Tesaloniczan',
-                '1' => '1Tes',
-                '2' => '',
-                '3' => '1Th'
-            ],
-            self::TORAH_BOOKS_2TES => [
-                'full' => '2 List do Tesaloniczan',
-                '1' => '2Tes',
-                '2' => '',
-                '3' => '2Th'
-            ],
-            self::TORAH_BOOKS_1TM => [
-                'full' => '1 List do Tymoteusza',
-                '1' => '1Tm',
-                '2' => '1Tym',
-                '3' => '1Ti'
-            ],
-            self::TORAH_BOOKS_2TM => [
-                'full' => '2 List do Tymoteusza',
-                '1' => '2Tm',
-                '2' => '2Tym',
-                '3' => '2Ti'
-            ],
-            self::TORAH_BOOKS_TT => [
-                'full' => 'List do Tytusa',
-                '1' => 'Tt',
-                '2' => 'Tyt',
-                '3' => 'Tit'
-            ],
-            self::TORAH_BOOKS_FLM => [
-                'full' => 'List do Filemona',
-                '1' => 'Flm',
-                '2' => 'Filem',
-                '3' => 'Phm'
-            ],
-            self::TORAH_BOOKS_HBR => [
-                'full' => 'List do Hebrajczyków',
-                '1' => 'Hbr',
-                '2' => 'Heb',
-                '3' => 'Hebr'
-            ],
-            self::TORAH_BOOKS_JK => [
-                'full' => 'List Jakuba',
-                '1' => 'Jk',
-                '2' => 'Jak',
-                '3' => 'Jas'
-            ],
-            self::TORAH_BOOKS_1P => [
-                'full' => '1 List Piotra',
-                '1' => '1P',
-                '2' => '',
-                '3' => '1Pe'
-            ],
-            self::TORAH_BOOKS_2P => [
-                'full' => '2 List Piotra',
-                '1' => '2P',
-                '2' => '',
-                '3' => '2Pe'
-            ],
-            self::TORAH_BOOKS_1J => [
-                'full' => '1 List Jana',
-                '1' => '1J',
-                '2' => '',
-                '3' => '1Jn'
-            ],
-            self::TORAH_BOOKS_2J => [
-                'full' => '2 List Jana',
-                '1' => '2J',
-                '2' => '',
-                '3' => '1Jn'
-            ],
-            self::TORAH_BOOKS_3J => [
-                'full' => '3 List Jana',
-                '1' => '3J',
-                '2' => '',
-                '3' => '3Jn'
-            ],
-            self::TORAH_BOOKS_JUD => [
-                'full' => 'List Judy',
-                '1' => 'Jud',
-                '2' => 'Judy',
-                '3' => 'Jude'
-            ],
-            self::TORAH_BOOKS_AP => [
-                'full' => 'Apokalipsa (Objawienie)',
-                '1' => 'Ap',
-                '2' => 'Ap',
-                '3' => 'Obj',
-                '4' => 'Rev'
-            ]
+            self::TORAH_BOOKS_MT => self::TORAH_BOOKS[self::TORAH_BOOKS_MT],
+            self::TORAH_BOOKS_MK => self::TORAH_BOOKS[self::TORAH_BOOKS_MK],
+            self::TORAH_BOOKS_LK => self::TORAH_BOOKS[self::TORAH_BOOKS_LK],
+            self::TORAH_BOOKS_J => self::TORAH_BOOKS[self::TORAH_BOOKS_J],
+            self::TORAH_BOOKS_DZ => self::TORAH_BOOKS[self::TORAH_BOOKS_DZ],
+            self::TORAH_BOOKS_RZ => self::TORAH_BOOKS[self::TORAH_BOOKS_RZ],
+            self::TORAH_BOOKS_1KOR => self::TORAH_BOOKS[self::TORAH_BOOKS_1KOR],
+            self::TORAH_BOOKS_2KOR => self::TORAH_BOOKS[self::TORAH_BOOKS_2KOR],
+            self::TORAH_BOOKS_GA => self::TORAH_BOOKS[self::TORAH_BOOKS_GA],
+            self::TORAH_BOOKS_EF => self::TORAH_BOOKS[self::TORAH_BOOKS_EF],
+            self::TORAH_BOOKS_FLP => self::TORAH_BOOKS[self::TORAH_BOOKS_FLP],
+            self::TORAH_BOOKS_KOL => self::TORAH_BOOKS[self::TORAH_BOOKS_KOL],
+            self::TORAH_BOOKS_1TES => self::TORAH_BOOKS[self::TORAH_BOOKS_1TES],
+            self::TORAH_BOOKS_2TES => self::TORAH_BOOKS[self::TORAH_BOOKS_2TES],
+            self::TORAH_BOOKS_1TM => self::TORAH_BOOKS[self::TORAH_BOOKS_1TM],
+            self::TORAH_BOOKS_2TM => self::TORAH_BOOKS[self::TORAH_BOOKS_2TM],
+            self::TORAH_BOOKS_TT => self::TORAH_BOOKS[self::TORAH_BOOKS_TT],
+            self::TORAH_BOOKS_FLM => self::TORAH_BOOKS[self::TORAH_BOOKS_FLM],
+            self::TORAH_BOOKS_HBR => self::TORAH_BOOKS[self::TORAH_BOOKS_HBR],
+            self::TORAH_BOOKS_JK => self::TORAH_BOOKS[self::TORAH_BOOKS_JK],
+            self::TORAH_BOOKS_1P => self::TORAH_BOOKS[self::TORAH_BOOKS_1P],
+            self::TORAH_BOOKS_2P => self::TORAH_BOOKS[self::TORAH_BOOKS_2P],
+            self::TORAH_BOOKS_1J => self::TORAH_BOOKS[self::TORAH_BOOKS_1J],
+            self::TORAH_BOOKS_2J => self::TORAH_BOOKS[self::TORAH_BOOKS_2J],
+            self::TORAH_BOOKS_3J => self::TORAH_BOOKS[self::TORAH_BOOKS_3J],
+            self::TORAH_BOOKS_JUD => self::TORAH_BOOKS[self::TORAH_BOOKS_JUD],
+            self::TORAH_BOOKS_AP => self::TORAH_BOOKS[self::TORAH_BOOKS_AP]
         ]
     ];
     // translations
@@ -1033,14 +735,14 @@ abstract class Resources implements
         self::TORAH_TRANSLATION_VUL => 'Łacińska Vulgata',
         self::TORAH_TRANSLATION_GR => 'Grecka Septuaginta'
     ];
-    public const TANAKH = 'Stary Testament';
-    public const BRITHADASHA = 'Nowy Testament';
+    public const TANAKH = 'Tanakh';
+    public const BRITHADASHA = 'Brit Hadasha';
     public const CHAPTERS = 'chapters';
     public const EXCEPTIONS = 'exceptions';
     /**
      * @var ServiceInterface
      */
-    protected ServiceInterface $service;
+    protected $service;
 
     public function __construct(ServiceInterface $service)
     {
@@ -1089,8 +791,8 @@ abstract class Resources implements
     /**
      * @inheritDoc
      */
-    public function get(Siglum $siglum): Text
+    public function get(Siglum $siglum, string $language): Text
     {
-        return $this->service->get($siglum);
+        return $this->service->get($siglum, $language);
     }
 }

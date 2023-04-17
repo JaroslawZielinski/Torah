@@ -11,6 +11,8 @@ use JaroslawZielinski\Torah\Translations\Resources;
 
 class Torah
 {
+    public const LANGUAGE_PL = 'pl';
+    public const LANGUAGE_EN = 'en';
     /**
      * @var TorahValidator
      */
@@ -104,22 +106,22 @@ class Torah
     /**
      * @throws \Exception
      */
-    public function getTextBySiglum(Siglum $siglum): ?Text
+    public function getTextBySiglum(Siglum $siglum, string $language = self::LANGUAGE_PL): ?Text
     {
         $translationCode = $siglum->getTranslation();
         $translation = $this->getResourceByTranslationCode($translationCode);
-        if ($this->isValid($siglum, $translation)) {
+        if ($this->isValid($siglum, $translation, $language)) {
             if (count($this->getErrors()) > 0) {
                 return null;
             }
-            return $translation->get($siglum);
+            return $translation->get($siglum, $language);
         }
         return null;
     }
 
-    public function isValid(AbstractSiglum $siglum, ?Resources $translation): bool
+    public function isValid(AbstractSiglum $siglum, ?Resources $translation, string $language): bool
     {
-        return $this->torahValidator->isValid($siglum, $translation);
+        return $this->torahValidator->isValid($siglum, $translation, $language);
     }
 
     public function getErrors(): array
