@@ -18,16 +18,21 @@ class Description
      * @var string
      */
     private $translation;
+    /**
+     * @var string
+     */
+    private $language;
 
-    public function __construct(string $translation, AbstractSiglum $sigla)
+    public function __construct(string $translation, AbstractSiglum $sigla, string $language)
     {
         $this->sigla = $sigla;
         $this->translation = $translation;
+        $this->language = $language;
     }
 
     public function __toString()
     {
-        $bookDescription = Resources::TORAH_BOOKS[$this->sigla->getBook()]['full'] ?? '';
+        $bookDescription = Resources::TORAH_BOOKS[$this->sigla->getBook()][$this->language] ?? '';
         $translationDescription = strip_tags(Resources::TORAH_TRANSLATIONS[$this->translation] ?? '');
         if ($this->sigla->isSingle()) {
             return sprintf(

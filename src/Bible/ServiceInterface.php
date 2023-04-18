@@ -10,7 +10,7 @@ use JaroslawZielinski\Torah\Bible\Torah\Text;
 interface ServiceInterface
 {
     /**
-     * gets Proccesses content by Siglum
+     * gets Processes content by siglum and by language
      */
-    public function get(Siglum $siglum): Text;
+    public function get(Siglum $siglum, string $language): Text;
 }

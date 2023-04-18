@@ -38,7 +38,7 @@ class Client
     /**
      * @throws \Exception
      */
-    public function query(Siglum $siglum): Response
+    public function query(Siglum $siglum, string $language): Response
     {
         try {
             $url = $this->getServiceUrlBySiglum($siglum);
@@ -50,7 +50,7 @@ class Client
             $this->logger->error($exception->getMessage(), $exception->getTrace());
             throw new \Exception(sprintf('Structure failure.[%s]', $exception->getMessage()));
         }
-        return new Response($siglum, $response);
+        return new Response($siglum, $response, $language);
     }
 
     public function getHttpCode(): int

@@ -12,21 +12,19 @@ class Response
 {
     private const ORDERED_VERSE = '(%s) %s';
     /**
-     * @var Siglum
-     */
-    private $siglum;
-    /**
      * @var Text
      */
     private $text;
 
-    public function __construct(Siglum $siglum, \GuzzleHttp\Psr7\Response $response)
-    {
-        $this->siglum = $siglum;
-        $this->text = $this->convertToText($response);
+    public function __construct(
+        Siglum $siglum,
+        \GuzzleHttp\Psr7\Response $response,
+        string $language
+    ) {
+        $this->text = $this->convertToText($response, $siglum, $language);
     }
 
-    private function convertToText(\GuzzleHttp\Psr7\Response $response): Text
+    private function convertToText(\GuzzleHttp\Psr7\Response $response, Siglum $siglum, string $language): Text
     {
         $serializedResponse = (string)$response->getBody();
         $arrayResponse = json_decode($serializedResponse, true);
@@ -42,7 +40,7 @@ class Response
         return new Text(
             implode(' ', $ordered),
             implode(' ', $unOrdered),
-            new Description($this->siglum->getTranslation(), $this->siglum)
+            new Description($siglum->getTranslation(), $siglum, $language)
         );
     }
 

@@ -29,7 +29,7 @@ composer require jaroslawzielinski/torah
 "and saying -- `Fulfilled hath been the time, and the reign of God hath come nigh, reform ye, and believe in the good news.'"
 ```
 
-**Ew. Marka 1:15, Young's Literal Translation**
+**Mark 1:15, Young's Literal Translation**
 
 ## Available Translations
 * Biblia Tysiąclecia
@@ -85,81 +85,83 @@ composer require jaroslawzielinski/torah
 #### Books:
 
 // Books of Tanakh
-* **TORAH_BOOKS_RDZ** (Ks. Rodzaju)
-* **TORAH_BOOKS_WJ** (Ks. Wyjścia)
-* **TORAH_BOOKS_KPL** (Ks. Kapłańska)
-* **TORAH_BOOKS_LB** (Ks. Liczb)
-* **TORAH_BOOKS_PWT** (Ks. Powt.Prawa)
-* **TORAH_BOOKS_JOZ** (Ks. Jozuego)
-* **TORAH_BOOKS_SDZ** (Ks. Sędziów)
-* **TORAH_BOOKS_RT** (Ks. Rut)
-* **TORAH_BOOKS_1SM** (1 Ks. Samuela)
-* **TORAH_BOOKS_2SM** (2 Ks. Samuela)
-* **TORAH_BOOKS_1KRL** (1 Ks. Królewska)
-* **TORAH_BOOKS_2KRL** (2 Ks. Królewska)
-* **TORAH_BOOKS_1KRN** (1 Ks. Kronik)
-* **TORAH_BOOKS_2KRN** (2 Ks. Kronik)
-* **TORAH_BOOKS_EZD** (Ks. Ezdrasza)
-* **TORAH_BOOKS_NE** (Ks. Nehemiasza)
-* **TORAH_BOOKS_TB** (Ks. Tobiasza (w)) // Deutero canonicals
-* **TORAH_BOOKS_JDT** (Ks. Judyty (w)) // Deutero canonicals
-* **TORAH_BOOKS_EST** (Ks. Estery)
-* **TORAH_BOOKS_1MCH** ( Ks. Machabejska (w)) // Deutero canonicals
-* **TORAH_BOOKS_2MCH** (2 Ks. Machabejska (w)) // Deutero canonicals
-* **TORAH_BOOKS_HI** (Ks. Hioba)
-* **TORAH_BOOKS_PS** (Ks. Psalmów)
-* **TORAH_BOOKS_PRZ** (Ks. Przysłów)
-* **TORAH_BOOKS_KOH** (Ks. Koheleta)
-* **TORAH_BOOKS_PNP** (Pieśń nad pieśniami)
-* **TORAH_BOOKS_MDR** (Ks. Mądrości (w)) // Deutero canonicals
-* **TORAH_BOOKS_SYR** (Mądrość Syracha (w)) // Deutero canonicals
-* **TORAH_BOOKS_IZ** (Ks. Izajasza)
-* **TORAH_BOOKS_JR** (Ks. Jeremiasza)
-* **TORAH_BOOKS_LM** (Lamentacje Jeremiasza)
-* **TORAH_BOOKS_BA** (Ks. Barucha (w)) // Deutero canonicals
-* **TORAH_BOOKS_EZ** (Ks. Ezechiela)
-* **TORAH_BOOKS_DN** (Ks. Daniela)
-* **TORAH_BOOKS_OZ** (Ks. Ozeasza)
-* **TORAH_BOOKS_JL** (Ks. Joela)
-* **TORAH_BOOKS_AM** (Ks. Amosa)
-* **TORAH_BOOKS_AB** (Ks. Abdiasza)
-* **TORAH_BOOKS_JON** (Ks. Jonasza)
-* **TORAH_BOOKS_MI** (Ks. Micheasza)
-* **TORAH_BOOKS_NA** (Ks. Nahuma)
-* **TORAH_BOOKS_HA** (Ks. Habakuka)
-* **TORAH_BOOKS_SO** (Ks. Sofoniasza)
-* **TORAH_BOOKS_AG** (Ks. Aggeusza)
-* **TORAH_BOOKS_ZA** (Ks. Zachariasza)
-* **TORAH_BOOKS_ML** (Ks. Malachiasza)
+* **TORAH_BOOKS_RDZ** (Genesis)
+* **TORAH_BOOKS_WJ** (Exodus)
+* **TORAH_BOOKS_KPL** (Leviticus)
+* **TORAH_BOOKS_LB** (Numbers)
+* **TORAH_BOOKS_PWT** (Deuteronomy)
+* **TORAH_BOOKS_JOZ** (Joshua)
+* **TORAH_BOOKS_SDZ** (Judges)
+* **TORAH_BOOKS_RT** (Ruth)
+* **TORAH_BOOKS_1SM** (1 Samuel)
+* **TORAH_BOOKS_2SM** (2 Samuel)
+* **TORAH_BOOKS_1KRL** (1 Kings)
+* **TORAH_BOOKS_2KRL** (2 Kings)
+* **TORAH_BOOKS_1KRN** (1 Chronicles)
+* **TORAH_BOOKS_2KRN** (2 Chronicles)
+* **TORAH_BOOKS_EZD** (Ezra)
+* **TORAH_BOOKS_NE** (Nehemiah)
+* **TORAH_BOOKS_TB** (Tobit) // Deutero canonicals
+* **TORAH_BOOKS_JDT** (Judith) // Deutero canonicals
+* **TORAH_BOOKS_EST** (Esther)
+* **TORAH_BOOKS_1MCH** (1 Maccabees) // Deutero canonicals
+* **TORAH_BOOKS_2MCH** (2 Maccabees) // Deutero canonicals
+* **TORAH_BOOKS_HI** (Job)
+* **TORAH_BOOKS_PS** (Psalms)
+* **TORAH_BOOKS_PRZ** (Proverbs)
+* **TORAH_BOOKS_KOH** (Ecclesiastes)
+* **TORAH_BOOKS_PNP** (Song of Songs)
+* **TORAH_BOOKS_MDR** (Wisdom) // Deutero canonicals
+* **TORAH_BOOKS_SYR** (Sirach) // Deutero canonicals
+
+// Books of Nevi'im ketuvim
+* **TORAH_BOOKS_IZ** (Isaiah)
+* **TORAH_BOOKS_JR** (Jeremiah)
+* **TORAH_BOOKS_LM** (Lamentations)
+* **TORAH_BOOKS_BA** (Baruch) // Deutero canonicals
+* **TORAH_BOOKS_EZ** (Ezekiel)
+* **TORAH_BOOKS_DN** (Daniel)
+* **TORAH_BOOKS_OZ** (Hosea)
+* **TORAH_BOOKS_JL** (Joel)
+* **TORAH_BOOKS_AM** (Amos)
+* **TORAH_BOOKS_AB** (Obadiah)
+* **TORAH_BOOKS_JON** (Jonah)
+* **TORAH_BOOKS_MI** (Micah)
+* **TORAH_BOOKS_NA** (Nahum)
+* **TORAH_BOOKS_HA** (Habakkuk)
+* **TORAH_BOOKS_SO** (Zephaniah)
+* **TORAH_BOOKS_AG** (Haggai)
+* **TORAH_BOOKS_ZA** (Zechariah)
+* **TORAH_BOOKS_ML** (Malachi)
 
 // Books of Brithadasha
-* **TORAH_BOOKS_MT** (Ew. Mateusza)
-* **TORAH_BOOKS_MK** (Ew. Marka)
-* **TORAH_BOOKS_LK** (Ew. Łukasza)
-* **TORAH_BOOKS_J** (Ew. Jana)
-* **TORAH_BOOKS_DZ** (Dzieje Apost.)
-* **TORAH_BOOKS_RZ** (List do Rzymian)
-* **TORAH_BOOKS_1KOR** (1 list do Koryntian)
-* **TORAH_BOOKS_2KOR** (2 list do Koryntian)
-* **TORAH_BOOKS_GA** (List do Galatów)
-* **TORAH_BOOKS_EF** (List do Efezjan)
-* **TORAH_BOOKS_FLP** (List do Filipian)
-* **TORAH_BOOKS_KOL** (List do Kolosan)
-* **TORAH_BOOKS_1TES** (1 List do Tesaloniczan)
-* **TORAH_BOOKS_2TES** (2 List do Tesaloniczan)
-* **TORAH_BOOKS_1TM** (1 List do Tymoteusza)
-* **TORAH_BOOKS_2TM** (2 List do Tymoteusza)
-* **TORAH_BOOKS_TT** (List do Tytusa)
-* **TORAH_BOOKS_FLM** (List do Filemona)
-* **TORAH_BOOKS_HBR** (List do Hebrajczyków)
-* **TORAH_BOOKS_JK** (List Jakuba)
-* **TORAH_BOOKS_1P** (1 List Piotra)
-* **TORAH_BOOKS_2P** (2 List Piotra)
-* **TORAH_BOOKS_1J** (1 List Jana)
-* **TORAH_BOOKS_2J** (2 List Jana)
-* **TORAH_BOOKS_3J** (3 List Jana)
-* **TORAH_BOOKS_JUD** (List Judy)
-* **TORAH_BOOKS_AP** (Apokalipsa (Objawienie))
+* **TORAH_BOOKS_MT** (Matthew)
+* **TORAH_BOOKS_MK** (Mark)
+* **TORAH_BOOKS_LK** (Luke)
+* **TORAH_BOOKS_J** (John)
+* **TORAH_BOOKS_DZ** (Acts)
+* **TORAH_BOOKS_RZ** (Romans)
+* **TORAH_BOOKS_1KOR** (1 Corinthians)
+* **TORAH_BOOKS_2KOR** (2 Corinthians)
+* **TORAH_BOOKS_GA** (Galatians)
+* **TORAH_BOOKS_EF** (Ephesians)
+* **TORAH_BOOKS_FLP** (Philippians)
+* **TORAH_BOOKS_KOL** (Colossians)
+* **TORAH_BOOKS_1TES** (1 Thessalonians)
+* **TORAH_BOOKS_2TES** (2 Thessalonians)
+* **TORAH_BOOKS_1TM** (1 Timothy)
+* **TORAH_BOOKS_2TM** (2 Timothy)
+* **TORAH_BOOKS_TT** (Titus)
+* **TORAH_BOOKS_FLM** (Philemon)
+* **TORAH_BOOKS_HBR** (Hebrews)
+* **TORAH_BOOKS_JK** (James)
+* **TORAH_BOOKS_1P** (1 Peter)
+* **TORAH_BOOKS_2P** (2 Peter)
+* **TORAH_BOOKS_1J** (1 John)
+* **TORAH_BOOKS_2J** (2 John)
+* **TORAH_BOOKS_3J** (3 John)
+* **TORAH_BOOKS_JUD** (Jude)
+* **TORAH_BOOKS_AP** (Revelation)
 
 ### Get Content
 ```php
@@ -180,7 +182,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 $siglum =
     SiglumFactory::create(
-        Resources::TORAH_TRANSLATION_BT,
+        Resources::TORAH_TRANSLATION_KJV,
         Resources::TORAH_BOOKS_J,
         '14',
         '21-24'
@@ -190,7 +192,7 @@ $logger = new Logger('Torah');
 $logger->pushHandler(new StreamHandler(__DIR__ . '/Torah.log', Logger::INFO));
 $client = new Service\Client($logger, new Client());
 $torah = new Torah(new TorahValidator(), new Service($client));
-$text = $torah->getTextBySiglum($siglum);
+$text = $torah->getTextBySiglum($siglum, Torah::LANGUAGE_EN);
 if (!empty($text)) {
     echo $text->getOrdered() . '<br/><br/>';
     echo $text->getUnOrdered() . '<br/><br/>';
@@ -203,11 +205,11 @@ if (!empty($text)) {
 
 Output:
 ```text
-(21) Kto ma przykazania moje i zachowuje je, ten Mnie miłuje. Kto zaś Mnie miłuje, ten będzie umiłowany przez Ojca mego, a również Ja będę go miłował i objawię mu siebie. (22) Rzekł do Niego Juda, ale nie Iskariota: Panie, cóż się stało, że nam się masz objawić, a nie światu? (23) W odpowiedzi rzekł do niego Jezus: Jeśli Mnie kto miłuje, będzie zachowywał moją naukę, a Ojciec mój umiłuje go, i przyjdziemy do niego, i będziemy u niego przebywać. (24) Kto Mnie nie miłuje, ten nie zachowuje słów moich. A nauka, którą słyszycie, nie jest moja, ale Tego, który Mnie posłał, Ojca.
+(21) He that hath my commandments, and keepeth them, he it is that loveth me: and he that loveth me shall be loved of my Father, and I will love him, and will manifest myself to him. (22) Judas saith unto him, not Iscariot, Lord, how is it that thou wilt manifest thyself unto us, and not unto the world? (23) Jesus answered and said unto him, If a man love me, he will keep my words: and my Father will love him, and we will come unto him, and make our abode with him. (24) He that loveth me not keepeth not my sayings: and the word which ye hear is not mine, but the Father's which sent me.
 
-Kto ma przykazania moje i zachowuje je, ten Mnie miłuje. Kto zaś Mnie miłuje, ten będzie umiłowany przez Ojca mego, a również Ja będę go miłował i objawię mu siebie. Rzekł do Niego Juda, ale nie Iskariota: Panie, cóż się stało, że nam się masz objawić, a nie światu? W odpowiedzi rzekł do niego Jezus: Jeśli Mnie kto miłuje, będzie zachowywał moją naukę, a Ojciec mój umiłuje go, i przyjdziemy do niego, i będziemy u niego przebywać. Kto Mnie nie miłuje, ten nie zachowuje słów moich. A nauka, którą słyszycie, nie jest moja, ale Tego, który Mnie posłał, Ojca.
+He that hath my commandments, and keepeth them, he it is that loveth me: and he that loveth me shall be loved of my Father, and I will love him, and will manifest myself to him. Judas saith unto him, not Iscariot, Lord, how is it that thou wilt manifest thyself unto us, and not unto the world? Jesus answered and said unto him, If a man love me, he will keep my words: and my Father will love him, and we will come unto him, and make our abode with him. He that loveth me not keepeth not my sayings: and the word which ye hear is not mine, but the Father's which sent me.
 
-Ew. Jana 14:21-24, Biblia Tysiąclecia
+John 14:21-24, King James Version
 
 ```
 
@@ -241,7 +243,7 @@ $logger->pushHandler(new StreamHandler(__DIR__ . '/Torah.log', Logger::INFO));
 $client = new Service\Client($logger, new Client());
 $torah = new Torah(new TorahValidator(), new Service($client));
 $translation = $torah->getResourceByTranslationCode($siglum->getTranslation());
-var_dump($torah->isValid($siglum, $translation));
+var_dump($torah->isValid($siglum, $translation, Torah::LANGUAGE_EN));
 print_r($torah->getErrors());
 
 ```
