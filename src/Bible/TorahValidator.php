@@ -32,7 +32,17 @@ class TorahValidator
         Resources::TORAH_BOOKS_PS,
         Resources::TORAH_BOOKS_PRZ,
         Resources::TORAH_BOOKS_KOH,
-        Resources::TORAH_BOOKS_PNP,
+        Resources::TORAH_BOOKS_PNP
+    ];
+    public const TANAKH_DEUTERO = [
+        Resources::TORAH_BOOKS_TB,
+        Resources::TORAH_BOOKS_JDT,
+        Resources::TORAH_BOOKS_1MCH,
+        Resources::TORAH_BOOKS_2MCH,
+        Resources::TORAH_BOOKS_MDR,
+        Resources::TORAH_BOOKS_SYR
+    ];
+    public const NEVIIMKETUVIM_PROTO = [
         Resources::TORAH_BOOKS_IZ,
         Resources::TORAH_BOOKS_JR,
         Resources::TORAH_BOOKS_LM,
@@ -51,13 +61,7 @@ class TorahValidator
         Resources::TORAH_BOOKS_ZA,
         Resources::TORAH_BOOKS_ML
     ];
-    public const TANAKH_DEUTERO = [
-        Resources::TORAH_BOOKS_TB,
-        Resources::TORAH_BOOKS_JDT,
-        Resources::TORAH_BOOKS_1MCH,
-        Resources::TORAH_BOOKS_2MCH,
-        Resources::TORAH_BOOKS_MDR,
-        Resources::TORAH_BOOKS_SYR,
+    public const NEVIIMKETUVIM_DEUTERO = [
         Resources::TORAH_BOOKS_BA
     ];
     public const BRIT_HADASHA = [
@@ -145,22 +149,36 @@ class TorahValidator
         // if book is valid
         $bookName = $siglum->getBook();
         $isProto = in_array($bookName, self::TANAKH_PROTO);
+        $isProtoN = in_array($bookName, self::NEVIIMKETUVIM_PROTO);
         $isDeutero = in_array($bookName, self::TANAKH_DEUTERO);
-        if ($isDeutero && !$translation->isDeutero()) {
+        $isDeuteroN = in_array($bookName, self::NEVIIMKETUVIM_DEUTERO);
+        if (($isDeutero || $isDeuteroN) && !$translation->isDeutero()) {
             $this->addError('The translation is not deutero cannonical.');
             return false;
         }
         $isTanakh = $isProto || $isDeutero;
+        $isNeviimKetuvim = $isProtoN || $isDeuteroN;
         $isBritHadasha = in_array($bookName, self::BRIT_HADASHA);
-        $oldOrNewTestament = $isTanakh || $isBritHadasha;
-        if (!$oldOrNewTestament) {
+        $isTorah = $isTanakh || $isNeviimKetuvim || $isBritHadasha;
+        if (!$isTorah) {
             $this->addError('The book is out of scope of the bible. Does it belong to apocrypha?');
             return false;
         }
         // if chapter is valid
         $tanakh = $translation->getTanakh();
+        $neviimKetuvim = $translation->getNeviimKetuvim();
         $britHadasha = $translation->getBritHadasha();
-        $book = $isTanakh ? $tanakh[$bookName] : $britHadasha[$bookName];
+        switch (true) {
+            case $isTanakh:
+                $book = $tanakh[$bookName];
+                break;
+            case $isNeviimKetuvim:
+                $book = $neviimKetuvim[$bookName];
+                break;
+            case $isBritHadasha:
+                $book = $britHadasha[$bookName];
+                break;
+        }
         $chapter = $siglum->getChapter();
         if (!isset($book[Resources::CHAPTERS][$chapter])) {
             $this->addError(sprintf('The chapter exceeds the book (\'%s\') chapters.', $bookName));

@@ -11,9 +11,13 @@ interface TorahInterface
      */
     public function getBooks(): array;
     /**
-     * Gets Tanak
+     * Gets Tanakh
      */
     public function getTanakh(): ?array;
+    /**
+     * Gets Nevi'im ketuvim
+     */
+    public function getNeviimKetuvim(): ?array;
     /**
      * Gets Brithadasha
      */

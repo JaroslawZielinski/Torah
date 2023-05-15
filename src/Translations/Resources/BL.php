@@ -190,7 +190,9 @@ class BL extends Resources
                         '1' => 18, '2' => 26, '3' => 22, '4' => 17, '5' => 19, '6' => 12, '7' => 29, '8' => 17,
                         '9' => 18, '10' => 20, '11' => 10, '12' => 14
                     ]
-                ],
+                ]
+            ],
+            self::NEVIIMKETUVIM => [
                 self::TORAH_BOOKS_IZ => [
                     self::CHAPTERS => [
                         '1' => 31, '2' => 22, '3' => 26, '4' => 6, '5' => 30, '6' => 13, '7' => 25, '8' => 23,
@@ -301,7 +303,7 @@ class BL extends Resources
                     self::CHAPTERS => [
                         '1' => 14, '2' => 17, '3' => 24
                     ]
-                ],
+                ]
             ],
             self::BRITHADASHA => [
                 self::TORAH_BOOKS_MT => [

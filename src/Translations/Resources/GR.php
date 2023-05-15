@@ -315,7 +315,9 @@ class GR extends Resources
                     self::CHAPTERS => [
                         '1' => 17, '2' => 17, '3' => 11, '4' => 16, '5' => 16, '6' => 12, '7' => 14, '8' => 14
                     ]
-                ],
+                ]
+            ],
+            self::NEVIIMKETUVIM => [
                 self::TORAH_BOOKS_IZ => [
                     self::CHAPTERS => [
                         '1' => 31, '2' => 21, '3' => 26, '4' => 6, '5' => 30, '6' => 13, '7' => 25, '8' => 23,
@@ -457,7 +459,7 @@ class GR extends Resources
                     self::CHAPTERS => [
                         '1' => 14, '2' => 17, '3' => 24
                     ]
-                ],
+                ]
             ],
             self::BRITHADASHA => [
                 self::TORAH_BOOKS_MT => [
