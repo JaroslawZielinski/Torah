@@ -254,7 +254,9 @@ class BP extends Resources
                         ['chapter' => 1, 'verse' => 5], ['chapter' => 17, 'verse' => 9],
                         ['chapter' => 24, 'verse' => 24]
                     ]
-                ],
+                ]
+            ],
+            self::NEVIIMKETUVIM => [
                 self::TORAH_BOOKS_IZ => [
                     self::CHAPTERS => [
                         '1' => 31, '2' => 22, '3' => 26, '4' => 6, '5' => 30, '6' => 13, '7' => 25, '8' => 22,
@@ -370,7 +372,7 @@ class BP extends Resources
                     self::CHAPTERS => [
                         '1' => 14, '2' => 17, '3' => 18
                     ]
-                ],
+                ]
             ],
             self::BRITHADASHA => [
                 self::TORAH_BOOKS_MT => [

@@ -23,6 +23,7 @@ class TNP extends Resources
     {
         return [
             self::TANAKH => [],
+            self::NEVIIMKETUVIM => [],
             self::BRITHADASHA => [
                 self::TORAH_BOOKS_MT => [
                     self::CHAPTERS => [

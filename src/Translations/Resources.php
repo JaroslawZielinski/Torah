@@ -736,6 +736,7 @@ abstract class Resources implements
         self::TORAH_TRANSLATION_GR => 'Grecka Septuaginta'
     ];
     public const TANAKH = 'Tanakh';
+    public const NEVIIMKETUVIM = 'Nevi\'im ketuvim';
     public const BRITHADASHA = 'Brit Hadasha';
     public const CHAPTERS = 'chapters';
     public const EXCEPTIONS = 'exceptions';
@@ -761,6 +762,15 @@ abstract class Resources implements
     /**
      * @inheritDoc
      */
+    public function getNeviimKetuvim(): ?array
+    {
+        $books = $this->getBooks();
+        return $books[self::NEVIIMKETUVIM] ?? null;
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getBritHadasha(): ?array
     {
         $books = $this->getBooks();
@@ -773,18 +783,23 @@ abstract class Resources implements
     public function isDeutero(): bool
     {
         $tanakh = $this->getTanakh() ?? [];
-        return 46 === count($tanakh) ||
-            !array_diff(
+        $neviimKetuvim = $this->getNeviimKetuvim() ?? [];
+        return !array_diff(
                 [
                     Resources::TORAH_BOOKS_TB,
                     Resources::TORAH_BOOKS_JDT,
                     Resources::TORAH_BOOKS_1MCH,
                     Resources::TORAH_BOOKS_2MCH,
                     Resources::TORAH_BOOKS_MDR,
-                    Resources::TORAH_BOOKS_SYR,
-                    Resources::TORAH_BOOKS_BA
+                    Resources::TORAH_BOOKS_SYR
                 ],
                 array_keys($tanakh)
+            ) ||
+            !array_diff(
+                [
+                    Resources::TORAH_BOOKS_BA
+                ],
+                array_keys($neviimKetuvim)
             );
     }
 
