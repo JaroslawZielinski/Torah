@@ -9,20 +9,26 @@ use JaroslawZielinski\Torah\Translations\Resources;
 class Description
 {
     private const SINGLE_VERSE_PATTERN = '%s %s:%s, %s';
+
     private const MULTI_VERSE_PATTERN = '%s %s:%s-%s, %s';
+
     /**
      * @var AbstractSiglum
      */
     private $sigla;
+
     /**
      * @var string
      */
     private $translation;
+
     /**
      * @var string
      */
     private $language;
 
+    /**
+     */
     public function __construct(string $translation, AbstractSiglum $sigla, string $language)
     {
         $this->sigla = $sigla;

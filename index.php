@@ -23,8 +23,8 @@ $siglum =
 
 $logger = new Logger('Torah');
 $logger->pushHandler(new StreamHandler(__DIR__ . '/Torah.log', Logger::INFO));
-$client = new Service\Client($logger, new Client());
-$torah = new Torah(new TorahValidator(), new Service($client));
+$onlineClient = new Service\Client($logger, new Client());
+$torah = new Torah(new TorahValidator(), new Service($onlineClient));
 $text = $torah->getTextBySiglum($siglum, Torah::LANGUAGE_EN);
 if (!empty($text)) {
     echo $text->getOrdered() . '<br/><br/>';

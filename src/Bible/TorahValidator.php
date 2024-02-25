@@ -122,24 +122,13 @@ class TorahValidator
         return $this;
     }
 
-    private function isException(AbstractSiglum $newSiglum, array $exceptions = []): bool
-    {
-        foreach ($newSiglum->getVerses() as $verse) {
-            foreach ($exceptions as $exception) {
-                if ($exception['chapter'] === (int)$verse->getChapter()
-                    && $exception['verse'] == (int)$verse->getVerseStart()
-                    && $exception['verse'] == (int)$verse->getVerseEnd()
-                ) {
-                    return true;
-                }
-            }
-        }
-
-        return false;
-    }
-
-    public function isValid(AbstractSiglum $siglum, ?Resources $translation, string $language): bool
-    {
+    /**
+     */
+    public function isValid(
+        AbstractSiglum $siglum,
+        ?Resources $translation,
+        string $language
+    ): bool {
         $result = true;
         $this->errors = [];
         if (empty($translation)) {
@@ -217,10 +206,6 @@ class TorahValidator
                 )
             );
             $result = false;
-        }
-        if ($this->isException($siglum, $book[Resources::EXCEPTIONS] ?? [])) {
-            $description = new Description($translation->getResourceName(), $siglum, $language);
-            $this->addError(sprintf('This siglum \'%s\' contains excception(s).', $description));
         }
         return $result;
     }
