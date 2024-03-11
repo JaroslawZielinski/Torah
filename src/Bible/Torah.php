@@ -26,13 +26,20 @@ class Torah
     private $service;
 
     /**
+     * @var array
+     */
+    private $options;
+
+    /**
      */
     public function __construct(
         TorahValidator $torahValidator,
-        ServiceInterface $service
+        ServiceInterface $service,
+        array $options = ['cache' => true]
     ) {
         $this->torahValidator = $torahValidator;
         $this->service = $service;
+        $this->options = $options;
     }
 
     public function getResourceByTranslationCode(string $translationCode): ?Resources
@@ -119,7 +126,7 @@ class Torah
             if (count($this->getErrors()) > 0) {
                 return null;
             }
-            return $translation->get($siglum, $language);
+            return $translation->get($siglum, $language, $this->options);
         }
         return null;
     }

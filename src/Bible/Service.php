@@ -48,8 +48,9 @@ class Service implements ServiceInterface
      * {@inheritDoc}
      * @throws \Exception
      */
-    public function get(Siglum $siglum, string $language, bool $cached = true): ?Text
+    public function get(Siglum $siglum, string $language, array $options): ?Text
     {
+        $cached = $options['cache'] ?? true;
         if (!$cached) {
             return $this->onlineClient
                 ->query($siglum, $language)
