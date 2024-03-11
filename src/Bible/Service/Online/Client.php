@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace JaroslawZielinski\Torah\Bible\Service;
+namespace JaroslawZielinski\Torah\Bible\Service\Online;
 
 use GuzzleHttp\Exception\GuzzleException;
 use JaroslawZielinski\Torah\Bible\Torah\Siglum;
@@ -11,22 +11,30 @@ use Psr\Log\LoggerInterface;
 class Client
 {
     private const API_SERVICE_URL = 'https://www.biblia.info.pl/api/biblia/%s/%s/%s/%s';
+    
     private const SERVICE_URL = 'https://www.biblia.info.pl/biblia/%s/%s/%s/%s';
+    
     private const SINGLE_VERSE = '%s';
+    
     private const MULTI_VERSES = '%s-%s';
+    
     /**
      * @var LoggerInterface
      */
     private $logger;
+    
     /**
      * @var \GuzzleHttp\Client
      */
     private $client;
+    
     /**
      * @int
      */
     private $httpCode = 200;
 
+    /**
+     */
     public function __construct(
         LoggerInterface $logger,
         \GuzzleHttp\Client $client

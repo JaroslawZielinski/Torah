@@ -8,6 +8,10 @@ use JaroslawZielinski\Torah\Bible\ServiceInterface;
 use JaroslawZielinski\Torah\Bible\Torah\Siglum;
 use JaroslawZielinski\Torah\Bible\TorahInterface;
 use JaroslawZielinski\Torah\Bible\Torah\Text;
+use JaroslawZielinski\Torah\Bible\Torah\Description;
+use JaroslawZielinski\Torah\Bible\Torah\SiglumFactory;
+use JaroslawZielinski\Torah\Bible\Torah\AbstractSiglum;
+
 
 abstract class Resources implements
     ResourcesInterface,
@@ -16,78 +20,151 @@ abstract class Resources implements
 {
     //books
     public const TORAH_BOOKS_RDZ = 'gen';
+    
     public const TORAH_BOOKS_WJ = 'ex';
+    
     public const TORAH_BOOKS_KPL = 'lev';
+    
     public const TORAH_BOOKS_LB = 'num';
+    
     public const TORAH_BOOKS_PWT = 'deu';
+    
     public const TORAH_BOOKS_JOZ = 'jos';
+    
     public const TORAH_BOOKS_SDZ = 'jdg';
+    
     public const TORAH_BOOKS_RT = 'ru';
+    
     public const TORAH_BOOKS_1SM = '1sa';
+    
     public const TORAH_BOOKS_2SM = '2sa';
+    
     public const TORAH_BOOKS_1KRL = '1ki';
+    
     public const TORAH_BOOKS_2KRL = '2ki';
+    
     public const TORAH_BOOKS_1KRN = '1ch';
+    
     public const TORAH_BOOKS_2KRN = '2ch';
+    
     public const TORAH_BOOKS_EZD = 'ezr';
+    
     public const TORAH_BOOKS_NE = 'neh';
+    
     public const TORAH_BOOKS_TB = 'tob';
+    
     public const TORAH_BOOKS_JDT = 'jdt';
+    
     public const TORAH_BOOKS_EST = 'est';
+    
     public const TORAH_BOOKS_1MCH = '1mach';
+    
     public const TORAH_BOOKS_2MCH = '2mach';
+    
     public const TORAH_BOOKS_HI = 'hi';
+    
     public const TORAH_BOOKS_PS = 'ps';
+    
     public const TORAH_BOOKS_PRZ = 'pr';
+    
     public const TORAH_BOOKS_KOH = 'ecc';
+    
     public const TORAH_BOOKS_PNP = 'ss';
+    
     public const TORAH_BOOKS_MDR = 'mdr';
+    
     public const TORAH_BOOKS_SYR = 'syr';
+    
     public const TORAH_BOOKS_IZ = 'isa';
+    
     public const TORAH_BOOKS_JR = 'jer';
+    
     public const TORAH_BOOKS_LM = 'tr';
+    
     public const TORAH_BOOKS_BA = 'bar';
+    
     public const TORAH_BOOKS_EZ = 'ez';
+    
     public const TORAH_BOOKS_DN = 'dn';
+    
     public const TORAH_BOOKS_OZ = 'hos';
+    
     public const TORAH_BOOKS_JL = 'joel';
+    
     public const TORAH_BOOKS_AM = 'amos';
+    
     public const TORAH_BOOKS_AB = 'ob';
+    
     public const TORAH_BOOKS_JON = 'jnh';
+    
     public const TORAH_BOOKS_MI = 'mic';
+    
     public const TORAH_BOOKS_NA = 'nach';
+    
     public const TORAH_BOOKS_HA = 'hab';
+    
     public const TORAH_BOOKS_SO = 'zep';
+    
     public const TORAH_BOOKS_AG = 'hag';
+    
     public const TORAH_BOOKS_ZA = 'zec';
+    
     public const TORAH_BOOKS_ML = 'mal';
+    
     public const TORAH_BOOKS_MT = 'mt';
+    
     public const TORAH_BOOKS_MK = 'mk';
+    
     public const TORAH_BOOKS_LK = 'lk';
+    
     public const TORAH_BOOKS_J = 'jn';
+    
     public const TORAH_BOOKS_DZ = 'ac';
+    
     public const TORAH_BOOKS_RZ = 'ro';
+    
     public const TORAH_BOOKS_1KOR = '1co';
+    
     public const TORAH_BOOKS_2KOR = '2co';
+    
     public const TORAH_BOOKS_GA = 'gal';
+    
     public const TORAH_BOOKS_EF = 'eph';
+    
     public const TORAH_BOOKS_FLP = 'php';
+    
     public const TORAH_BOOKS_KOL = 'col';
+    
     public const TORAH_BOOKS_1TES = '1th';
+    
     public const TORAH_BOOKS_2TES = '2th';
+    
     public const TORAH_BOOKS_1TM = '1tm';
+    
     public const TORAH_BOOKS_2TM = '2tm';
+    
     public const TORAH_BOOKS_TT = 'tyt';
+    
     public const TORAH_BOOKS_FLM = 'phm';
+    
     public const TORAH_BOOKS_HBR = 'hebr';
+    
     public const TORAH_BOOKS_JK = 'jas';
+    
     public const TORAH_BOOKS_1P = '1pe';
+    
     public const TORAH_BOOKS_2P = '2pe';
+    
     public const TORAH_BOOKS_1J = '1jn';
+    
     public const TORAH_BOOKS_2J = '2jn';
+    
     public const TORAH_BOOKS_3J = '3jn';
+    
     public const TORAH_BOOKS_JUD = 'jude';
+    
     public const TORAH_BOOKS_AP = 'rev';
+
     // books descriptions
     public const TORAH_BOOKS = [
         self::TORAH_BOOKS_RDZ => [
@@ -608,6 +685,7 @@ abstract class Resources implements
             '4' => 'Rev'
         ]
     ];
+
     public const TORAH_BOOKS_EXTENDED = [
         'Tanakh' => [
             self::TORAH_BOOKS_RDZ => self::TORAH_BOOKS[self::TORAH_BOOKS_RDZ],
@@ -689,28 +767,50 @@ abstract class Resources implements
             self::TORAH_BOOKS_AP => self::TORAH_BOOKS[self::TORAH_BOOKS_AP]
         ]
     ];
+
     // translations
     public const TORAH_TRANSLATION_BT = 'bt';
+
     public const TORAH_TRANSLATION_BW = 'bw';
+
     public const TORAH_TRANSLATION_BR = 'br';
+
     public const TORAH_TRANSLATION_ESP = 'esp';
+
     public const TORAH_TRANSLATION_BG = 'bg';
+
     public const TORAH_TRANSLATION_NG = 'ng';
+
     public const TORAH_TRANSLATION_UG= 'ug';
+
     public const TORAH_TRANSLATION_BB = 'bb';
+
     public const TORAH_TRANSLATION_BP = 'bp';
+
     public const TORAH_TRANSLATION_JW = 'jw';
+
     public const TORAH_TRANSLATION_BM = 'bm';
+
     public const TORAH_TRANSLATION_NS = 'ns';
+
     public const TORAH_TRANSLATION_BL = 'bl';
+
     public const TORAH_TRANSLATION_SZ = 'sz';
+
     public const TORAH_TRANSLATION_EIB = 'eib';
+
     public const TORAH_TRANSLATION_TNP = 'tnp';
+
     public const TORAH_TRANSLATION_KJV = 'kjv';
+
     public const TORAH_TRANSLATION_WEB = 'web';
+
     public const TORAH_TRANSLATION_YLT = 'ylt';
+
     public const TORAH_TRANSLATION_VUL = 'vul';
+
     public const TORAH_TRANSLATION_GR = 'gr';
+
     // translations descriptions
     public const TORAH_TRANSLATIONS = [
         self::TORAH_TRANSLATION_BT => 'Biblia Tysiąclecia',
@@ -736,15 +836,24 @@ abstract class Resources implements
         self::TORAH_TRANSLATION_GR => 'Grecka Septuaginta'
     ];
     public const TANAKH = 'Tanakh';
+
     public const NEVIIMKETUVIM = 'Nevi\'im ketuvim';
+
     public const BRITHADASHA = 'Brit Hadasha';
+
     public const CHAPTERS = 'chapters';
+
     public const EXCEPTIONS = 'exceptions';
+
+    public const ORDERED_PATTERN = '(%s) %s';
+
     /**
      * @var ServiceInterface
      */
     protected $service;
 
+    /**
+     */
     public function __construct(ServiceInterface $service)
     {
         $this->service = $service;
@@ -780,6 +889,15 @@ abstract class Resources implements
     /**
      * @inheritDoc
      */
+    public function getExceptions(): ?array
+    {
+        $books = $this->getBooks();
+        return $books[self::EXCEPTIONS] ?? null;
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function isDeutero(): bool
     {
         $tanakh = $this->getTanakh() ?? [];
@@ -802,12 +920,71 @@ abstract class Resources implements
                 array_keys($neviimKetuvim)
             );
     }
+    
+    
+    /**
+     * Fetch the verses and take into account the exceptions both positive and negative
+     * 
+     * @return Siglum[]
+     */
+    private function fetchVerses(Siglum $siglum): array 
+    {
+        $verses = $siglum->getVerses();
+        $sigla = [];
+        $translation = $siglum->getTranslation();
+        $exceptions = $this->getExceptions();
+        /** @var AbstractSiglum $abstracSiglum **/
+        foreach ($verses as $i => $abstracSiglum) {
+            $book = $abstracSiglum->getBook();
+            $chapter = $abstracSiglum->getChapter();
+            $verse = $abstracSiglum->getVerseStart();
+            $changes = $exceptions[$book][self::CHAPTERS][(string)$chapter][(int)$verse] ?? null;
+            if (null !== $changes) {
+                if (!empty($changes)) {
+                    //positive exception
+                    foreach ($changes as $change) {
+                        $siglum = SiglumFactory::create(
+                            $translation,
+                            $book,
+                            $chapter,
+                            $change
+                        );
+                        $sigla[] = $siglum;
+                    }
+                }
+            } else {
+                $siglum = SiglumFactory::create(
+                    $translation,
+                    $book,
+                    $chapter,
+                    $verse
+                );
+                $sigla[] = $siglum;
+            }
+        }
+        return $sigla;
+    }
 
     /**
      * @inheritDoc
      */
-    public function get(Siglum $siglum, string $language): Text
+    public function get(Siglum $siglum, string $language): ?Text
     {
-        return $this->service->get($siglum, $language);
+        $contentOrdered = [];
+        $contentUnordered = [];
+        /** @var Siglum $singleVerse */
+        foreach ($this->fetchVerses($siglum) as $key => $singleVerse) {
+            $content = $this->service
+                ->get($singleVerse, $language)
+                ->getUnOrdered();
+            $contentOrdered[$key] = sprintf(self::ORDERED_PATTERN, $singleVerse->getVerseStart(), $content);
+            $contentUnordered[$key] = $content;
+        }
+        // demultiplexing response
+        return new Text(
+            implode(' ', $contentOrdered),
+            implode(' ', $contentUnordered),
+            new Description($this->getResourceName(), $siglum, $language)
+        );
     }
 }

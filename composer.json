@@ -14,7 +14,9 @@
         "guzzlehttp/guzzle": ">=6.5.5 <8.0",
         "psr/log": "^1.1",
         "monolog/monolog": "1.x|~2.9",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ext-sqlite3": "*",
+        "jaroslawzielinski/sqlite3-database-class": "dev-master"    
     },
     "autoload": {
         "psr-4": {

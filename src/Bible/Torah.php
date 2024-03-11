@@ -12,16 +12,21 @@ use JaroslawZielinski\Torah\Translations\Resources;
 class Torah
 {
     public const LANGUAGE_PL = 'pl';
+
     public const LANGUAGE_EN = 'en';
+
     /**
      * @var TorahValidator
      */
     private $torahValidator;
+
     /**
      * @var ServiceInterface
      */
     private $service;
 
+    /**
+     */
     public function __construct(
         TorahValidator $torahValidator,
         ServiceInterface $service

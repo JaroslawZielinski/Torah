@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace JaroslawZielinski\Torah\Bible\Service;
+namespace JaroslawZielinski\Torah\Bible\Service\Online;
 
 use JaroslawZielinski\Torah\Bible\Torah\Description;
 use JaroslawZielinski\Torah\Bible\Torah\Siglum;
@@ -11,11 +11,14 @@ use JaroslawZielinski\Torah\Bible\Torah\Text;
 class Response
 {
     private const ORDERED_VERSE = '(%s) %s';
+
     /**
      * @var Text
      */
     private $text;
 
+    /**
+     */
     public function __construct(
         Siglum $siglum,
         \GuzzleHttp\Psr7\Response $response,
