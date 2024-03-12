@@ -24,4 +24,8 @@ interface RepositoryInterface
     /**
      */
     public function totalCount(string $translation): int;
+
+    /**
+     */
+    public function delete(string $translation, array $conditions = []): void;
 }

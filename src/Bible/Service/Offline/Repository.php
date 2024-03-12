@@ -83,7 +83,17 @@ EOT;
         $dB = $this->getConnection($resourceName);
         $totalInfo = [];
         $dB->items($resourceName, $limit = null, $totalInfo);
-        return 0;
+        return (int)($totalInfo['totalCount'] ?? '');
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function delete(string $translation, array $conditions = []): void
+    {
+        $resourceName = $this->getResourceName($translation);
+        $dB = $this->getConnection($resourceName);
+        $dB->delete($resourceName, $conditions);
     }
 
     /**

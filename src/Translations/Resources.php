@@ -968,14 +968,14 @@ abstract class Resources implements
     /**
      * @inheritDoc
      */
-    public function get(Siglum $siglum, string $language): ?Text
+    public function get(Siglum $siglum, string $language, array $options): ?Text
     {
         $contentOrdered = [];
         $contentUnordered = [];
         /** @var Siglum $singleVerse */
         foreach ($this->fetchVerses($siglum) as $key => $singleVerse) {
             $content = $this->service
-                ->get($singleVerse, $language)
+                ->get($singleVerse, $language, $options)
                 ->getUnOrdered();
             $contentOrdered[$key] = sprintf(self::ORDERED_PATTERN, $singleVerse->getVerseStart(), $content);
             $contentUnordered[$key] = $content;

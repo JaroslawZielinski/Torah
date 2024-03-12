@@ -12,5 +12,5 @@ interface ServiceInterface
     /**
      * gets Processes content by siglum and by language
      */
-    public function get(Siglum $siglum, string $language): ?Text;
+    public function get(Siglum $siglum, string $language, array $options): ?Text;
 }
