@@ -473,4 +473,12 @@ class BG extends Resources
             ]
         ];
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getMaxVerse(): int
+    {
+        return 3000;
+    }
 }
