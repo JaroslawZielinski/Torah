@@ -12,11 +12,11 @@
     "require": {
         "php": "^7.3|^8.0",
         "guzzlehttp/guzzle": ">=6.5.5 <8.0",
-        "psr/log": ">=1.1",
-        "monolog/monolog": ">=1.x",
+        "psr/log": "^1.0.1 || ^2.0 || ^3.0",
+        "monolog/monolog": "^1.0 || ^2.0",
         "ext-json": "*",
         "ext-sqlite3": "*",
-        "jaroslawzielinski/sqlite3-database-class": ">=1.x"
+        "jaroslawzielinski/sqlite3-database-class": "^1.0"
     },
     "autoload": {
         "psr-4": {
