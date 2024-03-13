@@ -16,7 +16,7 @@
         "monolog/monolog": ">=1.x",
         "ext-json": "*",
         "ext-sqlite3": "*",
-        "jaroslawzielinski/sqlite3-database-class": ">=1.0.3"
+        "jaroslawzielinski/sqlite3-database-class": ">=1.x"
     },
     "autoload": {
         "psr-4": {
