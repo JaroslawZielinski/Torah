@@ -473,4 +473,12 @@ class ESP extends Resources
             ]
         ];
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getMaxVerse(): int
+    {
+        return 3000;
+    }
 }

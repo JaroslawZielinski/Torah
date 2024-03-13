@@ -32,6 +32,11 @@ interface TorahInterface
     public function getExceptions(): ?array;
 
     /**
+     * Gets Max Verse - total verse count
+     */
+    public function getMaxVerse(): int;
+
+    /**
      * Checks if is deutero
      */
     public function isDeutero(): bool;

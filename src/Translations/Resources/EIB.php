@@ -180,4 +180,12 @@ class EIB extends Resources
             ]
         ];
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getMaxVerse(): int
+    {
+        return 3000;
+    }
 }
