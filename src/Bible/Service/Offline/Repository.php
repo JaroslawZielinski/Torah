@@ -89,11 +89,11 @@ EOT;
     /**
      * @inheritDoc
      */
-    public function delete(string $translation, array $conditions = []): void
+    public function delete(string $translation, array $conditions = []): bool
     {
         $resourceName = $this->getResourceName($translation);
         $dB = $this->getConnection($resourceName);
-        $dB->delete($resourceName, $conditions);
+        return $dB->delete($resourceName, $conditions);
     }
 
     /**
