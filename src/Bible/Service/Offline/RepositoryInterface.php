@@ -27,5 +27,5 @@ interface RepositoryInterface
 
     /**
      */
-    public function delete(string $translation, array $conditions = []): void;
+    public function delete(string $translation, array $conditions = []): bool;
 }
