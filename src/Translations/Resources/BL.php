@@ -450,6 +450,13 @@ class BL extends Resources
                         ]
                     ]
                 ],
+                self::TORAH_BOOKS_KPL => [
+                    self::CHAPTERS => [
+                        '20' => [
+                            6 => []
+                        ]
+                    ]
+                ],
                 self::TORAH_BOOKS_PWT => [
                     self::CHAPTERS => [
                         '27' => [
@@ -486,38 +493,38 @@ class BL extends Resources
                             25 => [],
                             32 => []
                         ]
-                    ],
-                    self::TORAH_BOOKS_HI => [
-                        self::CHAPTERS => [
-                            '1' => [
-                                6 => [],
-                                19 => []
-                            ],
-                            '3' => [
-                                15 => []
-                            ],
-                            '5' => [
-                                22 => []
-                            ],
-                            '6' => [
-                                9 => []
-                            ],
-                            '12' => [
-                                23 => []
-                            ],
-                            '33' => [
-                                19 => []
-                            ],
-                            '36' => [
-                                29 => []
-                            ]
+                    ]
+                ],
+                self::TORAH_BOOKS_HI => [
+                    self::CHAPTERS => [
+                        '1' => [
+                            6 => [],
+                            19 => []
+                        ],
+                        '3' => [
+                            15 => []
+                        ],
+                        '5' => [
+                            22 => []
+                        ],
+                        '6' => [
+                            9 => []
+                        ],
+                        '12' => [
+                            23 => []
+                        ],
+                        '33' => [
+                            19 => []
+                        ],
+                        '36' => [
+                            29 => []
                         ]
-                    ],
-                    self::TORAH_BOOKS_MI => [
-                        self::CHAPTERS => [
-                            '3' => [
-                                6 => []
-                            ]
+                    ]
+                ],
+                self::TORAH_BOOKS_MI => [
+                    self::CHAPTERS => [
+                        '3' => [
+                            6 => []
                         ]
                     ]
                 ]
@@ -530,6 +537,6 @@ class BL extends Resources
      */
     public function getMaxVerse(): int
     {
-        return 3000;
+        return 28092;
     }
 }
