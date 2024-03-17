@@ -910,6 +910,6 @@ class GR extends Resources
      */
     public function getMaxVerse(): int
     {
-        return 3000;
+        return 40000;
     }
 }
