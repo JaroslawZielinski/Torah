@@ -495,6 +495,9 @@ class GR extends Resources
                             27 => [],
                             28 => []
                         ],
+                        '32' => [
+                            9 => []
+                        ],
                         '35' => [
                             8 => [],
                             15 => [],
@@ -837,6 +840,7 @@ class GR extends Resources
                             20 => []
                         ],
                         '37' => [
+                            10 => [],
                             11 => [],
                             15 => []
                         ],
@@ -910,6 +914,6 @@ class GR extends Resources
      */
     public function getMaxVerse(): int
     {
-        return 40000;
+        return 30902;
     }
 }
