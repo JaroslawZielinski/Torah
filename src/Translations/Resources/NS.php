@@ -479,6 +479,6 @@ class NS extends Resources
      */
     public function getMaxVerse(): int
     {
-        return 3000;
+        return 31076;
     }
 }
