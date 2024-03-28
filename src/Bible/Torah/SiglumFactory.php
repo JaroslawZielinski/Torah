@@ -40,10 +40,10 @@ class SiglumFactory
     public static function createFromString(string $siglum): Siglum
     {
         $siglumArray = explode('/', $siglum);
-        $translation = $siglumArray[3] ?? null;
-        $book = $siglumArray[0] ?? null;
-        $chapter = $siglumArray[1] ?? null;
-        $verses = $siglumArray[2] ?? null;
+        $translation = $siglumArray[0] ?? null;
+        $book = $siglumArray[1] ?? null;
+        $chapter = $siglumArray[2] ?? null;
+        $verses = $siglumArray[3] ?? null;
         if (empty($translation) || empty($book) || empty($chapter) || empty($verses)) {
             throw new \Exception('Siglum format is not valid.');
         }
