@@ -34,6 +34,7 @@ class TorahValidator
         Resources::TORAH_BOOKS_KOH,
         Resources::TORAH_BOOKS_PNP
     ];
+
     public const TANAKH_DEUTERO = [
         Resources::TORAH_BOOKS_TB,
         Resources::TORAH_BOOKS_JDT,
@@ -42,6 +43,7 @@ class TorahValidator
         Resources::TORAH_BOOKS_MDR,
         Resources::TORAH_BOOKS_SYR
     ];
+
     public const NEVIIMKETUVIM_PROTO = [
         Resources::TORAH_BOOKS_IZ,
         Resources::TORAH_BOOKS_JR,
@@ -61,9 +63,11 @@ class TorahValidator
         Resources::TORAH_BOOKS_ZA,
         Resources::TORAH_BOOKS_ML
     ];
+
     public const NEVIIMKETUVIM_DEUTERO = [
         Resources::TORAH_BOOKS_BA
     ];
+
     public const BRIT_HADASHA = [
         Resources::TORAH_BOOKS_MT,
         Resources::TORAH_BOOKS_MK,
@@ -159,13 +163,25 @@ class TorahValidator
         $britHadasha = $translation->getBritHadasha();
         switch (true) {
             case $isTanakh:
-                $book = $tanakh[$bookName];
+                $book = $tanakh[$bookName] ?? null;
+                if (empty($book)) {
+                    $this->addError(sprintf('The book \'%s\' is not available in the Tanakh of this translation (\'%s\').', $bookName, $translation->getResourceName()));
+                    return false;
+                }
                 break;
             case $isNeviimKetuvim:
-                $book = $neviimKetuvim[$bookName];
+                $book = $neviimKetuvim[$bookName] ?? null;
+                if (empty($book)) {
+                    $this->addError(sprintf('The book \'%s\' is not available in the Nevi\'im ketuvim of this translation (\'%s\').', $bookName, $translation->getResourceName()));
+                    return false;
+                }
                 break;
             case $isBritHadasha:
-                $book = $britHadasha[$bookName];
+                $book = $britHadasha[$bookName] ?? null;
+                if (empty($book)) {
+                    $this->addError(sprintf('The book \'%s\' is not available in the Brit Hadasha of this translation (\'%s\').', $bookName, $translation->getResourceName()));
+                    return false;
+                }
                 break;
         }
         $chapter = $siglum->getChapter();
