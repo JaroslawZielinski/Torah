@@ -774,7 +774,7 @@ abstract class Resources implements
         ]
     ];
 
-    public const TORAH_BOOKS_THREE_DIVISION = TORAH_BOOKS_EXTENDED;
+    public const TORAH_BOOKS_THREE_DIVISION = self::TORAH_BOOKS_EXTENDED;
 
     public const OLD_TESTAMENT = 'Old Testament';
 
