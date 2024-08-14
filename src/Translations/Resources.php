@@ -20,149 +20,149 @@ abstract class Resources implements
 {
     //books
     public const TORAH_BOOKS_RDZ = 'gen';
-    
+
     public const TORAH_BOOKS_WJ = 'ex';
-    
+
     public const TORAH_BOOKS_KPL = 'lev';
-    
+
     public const TORAH_BOOKS_LB = 'num';
-    
+
     public const TORAH_BOOKS_PWT = 'deu';
-    
+
     public const TORAH_BOOKS_JOZ = 'jos';
-    
+
     public const TORAH_BOOKS_SDZ = 'jdg';
-    
+
     public const TORAH_BOOKS_RT = 'ru';
-    
+
     public const TORAH_BOOKS_1SM = '1sa';
-    
+
     public const TORAH_BOOKS_2SM = '2sa';
-    
+
     public const TORAH_BOOKS_1KRL = '1ki';
-    
+
     public const TORAH_BOOKS_2KRL = '2ki';
-    
+
     public const TORAH_BOOKS_1KRN = '1ch';
-    
+
     public const TORAH_BOOKS_2KRN = '2ch';
-    
+
     public const TORAH_BOOKS_EZD = 'ezr';
-    
+
     public const TORAH_BOOKS_NE = 'neh';
-    
+
     public const TORAH_BOOKS_TB = 'tob';
-    
+
     public const TORAH_BOOKS_JDT = 'jdt';
-    
+
     public const TORAH_BOOKS_EST = 'est';
-    
+
     public const TORAH_BOOKS_1MCH = '1mach';
-    
+
     public const TORAH_BOOKS_2MCH = '2mach';
-    
+
     public const TORAH_BOOKS_HI = 'hi';
-    
+
     public const TORAH_BOOKS_PS = 'ps';
-    
+
     public const TORAH_BOOKS_PRZ = 'pr';
-    
+
     public const TORAH_BOOKS_KOH = 'ecc';
-    
+
     public const TORAH_BOOKS_PNP = 'ss';
-    
+
     public const TORAH_BOOKS_MDR = 'mdr';
-    
+
     public const TORAH_BOOKS_SYR = 'syr';
-    
+
     public const TORAH_BOOKS_IZ = 'isa';
-    
+
     public const TORAH_BOOKS_JR = 'jer';
-    
+
     public const TORAH_BOOKS_LM = 'tr';
-    
+
     public const TORAH_BOOKS_BA = 'bar';
-    
+
     public const TORAH_BOOKS_EZ = 'ez';
-    
+
     public const TORAH_BOOKS_DN = 'dn';
-    
+
     public const TORAH_BOOKS_OZ = 'hos';
-    
+
     public const TORAH_BOOKS_JL = 'joel';
-    
+
     public const TORAH_BOOKS_AM = 'amos';
-    
+
     public const TORAH_BOOKS_AB = 'ob';
-    
+
     public const TORAH_BOOKS_JON = 'jnh';
-    
+
     public const TORAH_BOOKS_MI = 'mic';
-    
+
     public const TORAH_BOOKS_NA = 'nach';
-    
+
     public const TORAH_BOOKS_HA = 'hab';
-    
+
     public const TORAH_BOOKS_SO = 'zep';
-    
+
     public const TORAH_BOOKS_AG = 'hag';
-    
+
     public const TORAH_BOOKS_ZA = 'zec';
-    
+
     public const TORAH_BOOKS_ML = 'mal';
-    
+
     public const TORAH_BOOKS_MT = 'mt';
-    
+
     public const TORAH_BOOKS_MK = 'mk';
-    
+
     public const TORAH_BOOKS_LK = 'lk';
-    
+
     public const TORAH_BOOKS_J = 'jn';
-    
+
     public const TORAH_BOOKS_DZ = 'ac';
-    
+
     public const TORAH_BOOKS_RZ = 'ro';
-    
+
     public const TORAH_BOOKS_1KOR = '1co';
-    
+
     public const TORAH_BOOKS_2KOR = '2co';
-    
+
     public const TORAH_BOOKS_GA = 'gal';
-    
+
     public const TORAH_BOOKS_EF = 'eph';
-    
+
     public const TORAH_BOOKS_FLP = 'php';
-    
+
     public const TORAH_BOOKS_KOL = 'col';
-    
+
     public const TORAH_BOOKS_1TES = '1th';
-    
+
     public const TORAH_BOOKS_2TES = '2th';
-    
+
     public const TORAH_BOOKS_1TM = '1tm';
-    
+
     public const TORAH_BOOKS_2TM = '2tm';
-    
+
     public const TORAH_BOOKS_TT = 'tyt';
-    
+
     public const TORAH_BOOKS_FLM = 'phm';
-    
+
     public const TORAH_BOOKS_HBR = 'hebr';
-    
+
     public const TORAH_BOOKS_JK = 'jas';
-    
+
     public const TORAH_BOOKS_1P = '1pe';
-    
+
     public const TORAH_BOOKS_2P = '2pe';
-    
+
     public const TORAH_BOOKS_1J = '1jn';
-    
+
     public const TORAH_BOOKS_2J = '2jn';
-    
+
     public const TORAH_BOOKS_3J = '3jn';
-    
+
     public const TORAH_BOOKS_JUD = 'jude';
-    
+
     public const TORAH_BOOKS_AP = 'rev';
 
     // books descriptions
@@ -686,8 +686,102 @@ abstract class Resources implements
         ]
     ];
 
+    public const TANAKH = 'Tanakh';
+
+    public const NEVIIMKETUVIM = 'Nevi\'im ketuvim';
+
+    public const BRITHADASHA = 'Brit Hadasha';
+
     public const TORAH_BOOKS_EXTENDED = [
-        'Tanakh' => [
+        self::TANAKH => [
+            self::TORAH_BOOKS_RDZ => self::TORAH_BOOKS[self::TORAH_BOOKS_RDZ],
+            self::TORAH_BOOKS_WJ => self::TORAH_BOOKS[self::TORAH_BOOKS_WJ],
+            self::TORAH_BOOKS_KPL => self::TORAH_BOOKS[self::TORAH_BOOKS_KPL],
+            self::TORAH_BOOKS_LB => self::TORAH_BOOKS[self::TORAH_BOOKS_LB],
+            self::TORAH_BOOKS_PWT => self::TORAH_BOOKS[self::TORAH_BOOKS_PWT],
+            self::TORAH_BOOKS_JOZ => self::TORAH_BOOKS[self::TORAH_BOOKS_JOZ],
+            self::TORAH_BOOKS_SDZ => self::TORAH_BOOKS[self::TORAH_BOOKS_SDZ],
+            self::TORAH_BOOKS_RT => self::TORAH_BOOKS[self::TORAH_BOOKS_RT],
+            self::TORAH_BOOKS_1SM => self::TORAH_BOOKS[self::TORAH_BOOKS_1SM],
+            self::TORAH_BOOKS_2SM => self::TORAH_BOOKS[self::TORAH_BOOKS_2SM],
+            self::TORAH_BOOKS_1KRL => self::TORAH_BOOKS[self::TORAH_BOOKS_1KRL],
+            self::TORAH_BOOKS_2KRL => self::TORAH_BOOKS[self::TORAH_BOOKS_2KRL],
+            self::TORAH_BOOKS_1KRN => self::TORAH_BOOKS[self::TORAH_BOOKS_1KRN],
+            self::TORAH_BOOKS_2KRN => self::TORAH_BOOKS[self::TORAH_BOOKS_2KRN],
+            self::TORAH_BOOKS_EZD => self::TORAH_BOOKS[self::TORAH_BOOKS_EZD],
+            self::TORAH_BOOKS_NE => self::TORAH_BOOKS[self::TORAH_BOOKS_NE],
+            self::TORAH_BOOKS_TB => self::TORAH_BOOKS[self::TORAH_BOOKS_TB],
+            self::TORAH_BOOKS_JDT => self::TORAH_BOOKS[self::TORAH_BOOKS_JDT],
+            self::TORAH_BOOKS_EST => self::TORAH_BOOKS[self::TORAH_BOOKS_EST],
+            self::TORAH_BOOKS_1MCH => self::TORAH_BOOKS[self::TORAH_BOOKS_1MCH],
+            self::TORAH_BOOKS_2MCH => self::TORAH_BOOKS[self::TORAH_BOOKS_2MCH],
+            self::TORAH_BOOKS_HI => self::TORAH_BOOKS[self::TORAH_BOOKS_HI],
+            self::TORAH_BOOKS_PS => self::TORAH_BOOKS[self::TORAH_BOOKS_PS],
+            self::TORAH_BOOKS_PRZ => self::TORAH_BOOKS[self::TORAH_BOOKS_PRZ],
+            self::TORAH_BOOKS_KOH => self::TORAH_BOOKS[self::TORAH_BOOKS_KOH],
+            self::TORAH_BOOKS_PNP => self::TORAH_BOOKS[self::TORAH_BOOKS_PNP],
+            self::TORAH_BOOKS_MDR => self::TORAH_BOOKS[self::TORAH_BOOKS_MDR],
+            self::TORAH_BOOKS_SYR => self::TORAH_BOOKS[self::TORAH_BOOKS_SYR]
+        ],
+        self::NEVIIMKETUVIM => [
+            self::TORAH_BOOKS_IZ => self::TORAH_BOOKS[self::TORAH_BOOKS_IZ],
+            self::TORAH_BOOKS_JR => self::TORAH_BOOKS[self::TORAH_BOOKS_JR],
+            self::TORAH_BOOKS_LM => self::TORAH_BOOKS[self::TORAH_BOOKS_LM],
+            self::TORAH_BOOKS_BA => self::TORAH_BOOKS[self::TORAH_BOOKS_BA],
+            self::TORAH_BOOKS_EZ => self::TORAH_BOOKS[self::TORAH_BOOKS_EZ],
+            self::TORAH_BOOKS_DN => self::TORAH_BOOKS[self::TORAH_BOOKS_DN],
+            self::TORAH_BOOKS_OZ => self::TORAH_BOOKS[self::TORAH_BOOKS_OZ],
+            self::TORAH_BOOKS_JL => self::TORAH_BOOKS[self::TORAH_BOOKS_JL],
+            self::TORAH_BOOKS_AM => self::TORAH_BOOKS[self::TORAH_BOOKS_AM],
+            self::TORAH_BOOKS_AB => self::TORAH_BOOKS[self::TORAH_BOOKS_AB],
+            self::TORAH_BOOKS_JON => self::TORAH_BOOKS[self::TORAH_BOOKS_JON],
+            self::TORAH_BOOKS_MI => self::TORAH_BOOKS[self::TORAH_BOOKS_MI],
+            self::TORAH_BOOKS_NA => self::TORAH_BOOKS[self::TORAH_BOOKS_NA],
+            self::TORAH_BOOKS_HA => self::TORAH_BOOKS[self::TORAH_BOOKS_HA],
+            self::TORAH_BOOKS_SO => self::TORAH_BOOKS[self::TORAH_BOOKS_SO],
+            self::TORAH_BOOKS_AG => self::TORAH_BOOKS[self::TORAH_BOOKS_AG],
+            self::TORAH_BOOKS_ZA => self::TORAH_BOOKS[self::TORAH_BOOKS_ZA],
+            self::TORAH_BOOKS_ML => self::TORAH_BOOKS[self::TORAH_BOOKS_ML]
+        ],
+        self::BRITHADASHA => [
+            self::TORAH_BOOKS_MT => self::TORAH_BOOKS[self::TORAH_BOOKS_MT],
+            self::TORAH_BOOKS_MK => self::TORAH_BOOKS[self::TORAH_BOOKS_MK],
+            self::TORAH_BOOKS_LK => self::TORAH_BOOKS[self::TORAH_BOOKS_LK],
+            self::TORAH_BOOKS_J => self::TORAH_BOOKS[self::TORAH_BOOKS_J],
+            self::TORAH_BOOKS_DZ => self::TORAH_BOOKS[self::TORAH_BOOKS_DZ],
+            self::TORAH_BOOKS_RZ => self::TORAH_BOOKS[self::TORAH_BOOKS_RZ],
+            self::TORAH_BOOKS_1KOR => self::TORAH_BOOKS[self::TORAH_BOOKS_1KOR],
+            self::TORAH_BOOKS_2KOR => self::TORAH_BOOKS[self::TORAH_BOOKS_2KOR],
+            self::TORAH_BOOKS_GA => self::TORAH_BOOKS[self::TORAH_BOOKS_GA],
+            self::TORAH_BOOKS_EF => self::TORAH_BOOKS[self::TORAH_BOOKS_EF],
+            self::TORAH_BOOKS_FLP => self::TORAH_BOOKS[self::TORAH_BOOKS_FLP],
+            self::TORAH_BOOKS_KOL => self::TORAH_BOOKS[self::TORAH_BOOKS_KOL],
+            self::TORAH_BOOKS_1TES => self::TORAH_BOOKS[self::TORAH_BOOKS_1TES],
+            self::TORAH_BOOKS_2TES => self::TORAH_BOOKS[self::TORAH_BOOKS_2TES],
+            self::TORAH_BOOKS_1TM => self::TORAH_BOOKS[self::TORAH_BOOKS_1TM],
+            self::TORAH_BOOKS_2TM => self::TORAH_BOOKS[self::TORAH_BOOKS_2TM],
+            self::TORAH_BOOKS_TT => self::TORAH_BOOKS[self::TORAH_BOOKS_TT],
+            self::TORAH_BOOKS_FLM => self::TORAH_BOOKS[self::TORAH_BOOKS_FLM],
+            self::TORAH_BOOKS_HBR => self::TORAH_BOOKS[self::TORAH_BOOKS_HBR],
+            self::TORAH_BOOKS_JK => self::TORAH_BOOKS[self::TORAH_BOOKS_JK],
+            self::TORAH_BOOKS_1P => self::TORAH_BOOKS[self::TORAH_BOOKS_1P],
+            self::TORAH_BOOKS_2P => self::TORAH_BOOKS[self::TORAH_BOOKS_2P],
+            self::TORAH_BOOKS_1J => self::TORAH_BOOKS[self::TORAH_BOOKS_1J],
+            self::TORAH_BOOKS_2J => self::TORAH_BOOKS[self::TORAH_BOOKS_2J],
+            self::TORAH_BOOKS_3J => self::TORAH_BOOKS[self::TORAH_BOOKS_3J],
+            self::TORAH_BOOKS_JUD => self::TORAH_BOOKS[self::TORAH_BOOKS_JUD],
+            self::TORAH_BOOKS_AP => self::TORAH_BOOKS[self::TORAH_BOOKS_AP]
+        ]
+    ];
+
+    public const TORAH_BOOKS_THREE_DIVISION = TORAH_BOOKS_EXTENDED;
+
+    public const OLD_TESTAMENT = 'Old Testament';
+
+    public const NEW_TESTAMENT = 'New Testament';
+
+    public const TORAH_BOOKS_TWO_DIVISION = [
+        self::OLD_TESTAMENT => [
             self::TORAH_BOOKS_RDZ => self::TORAH_BOOKS[self::TORAH_BOOKS_RDZ],
             self::TORAH_BOOKS_WJ => self::TORAH_BOOKS[self::TORAH_BOOKS_WJ],
             self::TORAH_BOOKS_KPL => self::TORAH_BOOKS[self::TORAH_BOOKS_KPL],
@@ -716,8 +810,6 @@ abstract class Resources implements
             self::TORAH_BOOKS_PNP => self::TORAH_BOOKS[self::TORAH_BOOKS_PNP],
             self::TORAH_BOOKS_MDR => self::TORAH_BOOKS[self::TORAH_BOOKS_MDR],
             self::TORAH_BOOKS_SYR => self::TORAH_BOOKS[self::TORAH_BOOKS_SYR],
-        ],
-        'Nevi\'im ketuvim' => [
             self::TORAH_BOOKS_IZ => self::TORAH_BOOKS[self::TORAH_BOOKS_IZ],
             self::TORAH_BOOKS_JR => self::TORAH_BOOKS[self::TORAH_BOOKS_JR],
             self::TORAH_BOOKS_LM => self::TORAH_BOOKS[self::TORAH_BOOKS_LM],
@@ -735,9 +827,10 @@ abstract class Resources implements
             self::TORAH_BOOKS_SO => self::TORAH_BOOKS[self::TORAH_BOOKS_SO],
             self::TORAH_BOOKS_AG => self::TORAH_BOOKS[self::TORAH_BOOKS_AG],
             self::TORAH_BOOKS_ZA => self::TORAH_BOOKS[self::TORAH_BOOKS_ZA],
-            self::TORAH_BOOKS_ML => self::TORAH_BOOKS[self::TORAH_BOOKS_ML],
+            self::TORAH_BOOKS_ML => self::TORAH_BOOKS[self::TORAH_BOOKS_ML]
         ],
-        'Brit Hadasha' => [
+
+        self::NEW_TESTAMENT => [
             self::TORAH_BOOKS_MT => self::TORAH_BOOKS[self::TORAH_BOOKS_MT],
             self::TORAH_BOOKS_MK => self::TORAH_BOOKS[self::TORAH_BOOKS_MK],
             self::TORAH_BOOKS_LK => self::TORAH_BOOKS[self::TORAH_BOOKS_LK],
@@ -769,6 +862,7 @@ abstract class Resources implements
     ];
 
     // translations
+
     public const TORAH_TRANSLATION_BT = 'bt';
 
     public const TORAH_TRANSLATION_BW = 'bw';
@@ -810,7 +904,6 @@ abstract class Resources implements
     public const TORAH_TRANSLATION_VUL = 'vul';
 
     public const TORAH_TRANSLATION_GR = 'gr';
-
     // translations descriptions
     public const TORAH_TRANSLATIONS = [
         self::TORAH_TRANSLATION_BT => 'Biblia Tysiąclecia',
@@ -835,11 +928,6 @@ abstract class Resources implements
         self::TORAH_TRANSLATION_VUL => 'Łacińska Vulgata',
         self::TORAH_TRANSLATION_GR => 'Grecka Septuaginta'
     ];
-    public const TANAKH = 'Tanakh';
-
-    public const NEVIIMKETUVIM = 'Nevi\'im ketuvim';
-
-    public const BRITHADASHA = 'Brit Hadasha';
 
     public const CHAPTERS = 'chapters';
 
@@ -920,14 +1008,14 @@ abstract class Resources implements
                 array_keys($neviimKetuvim)
             );
     }
-    
-    
+
+
     /**
      * Fetch the verses and take into account the exceptions both positive and negative
-     * 
+     *
      * @return Siglum[]
      */
-    private function fetchVerses(Siglum $siglum): array 
+    private function fetchVerses(Siglum $siglum): array
     {
         $verses = $siglum->getVerses();
         $sigla = [];
