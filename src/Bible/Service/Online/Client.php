@@ -11,23 +11,25 @@ use Psr\Log\LoggerInterface;
 class Client
 {
     private const API_SERVICE_URL = 'https://www.biblia.info.pl/api/biblia/%s/%s/%s/%s';
-    
-    private const SERVICE_URL = 'https://www.biblia.info.pl/biblia/%s/%s/%s/%s';
-    
+
+    private const BASE_SERVICE_URL = 'https://www.biblia.info.pl/biblia/';
+
+    private const SERVICE_URL = self::BASE_SERVICE_URL . '%s/%s/%s/%s';
+
     private const SINGLE_VERSE = '%s';
-    
+
     private const MULTI_VERSES = '%s-%s';
-    
+
     /**
      * @var LoggerInterface
      */
     private $logger;
-    
+
     /**
      * @var \GuzzleHttp\Client
      */
     private $client;
-    
+
     /**
      * @int
      */
@@ -85,5 +87,10 @@ class Client
     public function getUrlBySiglum(Siglum $siglum): string
     {
         return $this->getServiceUrlBySiglum($siglum, self::SERVICE_URL);
+    }
+
+    public function getBaseUrl(): string
+    {
+        return self::BASE_SERVICE_URL;
     }
 }
