@@ -1075,4 +1075,12 @@ abstract class Resources implements
             new Description($this->getResourceName(), $siglum, $language)
         );
     }
+
+    /**
+     * @return Siglum[]
+     */
+    public function getSingleSigleBySiglum(Siglum $siglum): array
+    {
+        return $this->fetchVerses($siglum);
+    }
 }
