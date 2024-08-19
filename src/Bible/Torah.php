@@ -140,4 +140,14 @@ class Torah
     {
         return $this->torahValidator->getErrors();
     }
+
+    /**
+     * @return Siglum[]
+     */
+    public function getSingleSiglaBySiglum(Siglum $siglum): array
+    {
+        $translationCode = $siglum->getTranslation();
+        $translation = $this->getResourceByTranslationCode($translationCode);
+        return $translation->getSingleSigleBySiglum($siglum);
+    }
 }
