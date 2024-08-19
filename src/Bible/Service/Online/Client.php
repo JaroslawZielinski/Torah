@@ -89,7 +89,7 @@ class Client
         return $this->getServiceUrlBySiglum($siglum, self::SERVICE_URL);
     }
 
-    public function getBaseUrl(): string
+    public static function getBaseUrl(): string
     {
         return self::BASE_SERVICE_URL;
     }
