@@ -28,7 +28,7 @@ class SiglumFactory
         $book = $abstractSiglumArray[0] ?? null;
         $chapter = $abstractSiglumArray[1] ?? null;
         $verses = $abstractSiglumArray[2] ?? null;
-        if (empty($book) || empty($chapter) || empty($verses)) {
+        if (empty($book) || ('0' !== $chapter && empty($chapter)) || empty($verses)) {
             throw new \Exception('String format is not valid.');
         }
         return self::create($translation, $book, $chapter, $verses);
