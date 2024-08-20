@@ -44,7 +44,7 @@ class SiglumFactory
         $book = $siglumArray[1] ?? null;
         $chapter = $siglumArray[2] ?? null;
         $verses = $siglumArray[3] ?? null;
-        if (empty($translation) || empty($book) || empty($chapter) || empty($verses)) {
+        if (empty($translation) || empty($book) || ('0' !== $chapter && empty($chapter)) || empty($verses)) {
             throw new \Exception('Siglum format is not valid.');
         }
         return self::create($translation, $book, $chapter, $verses);
