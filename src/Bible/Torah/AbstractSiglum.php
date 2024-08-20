@@ -78,7 +78,9 @@ class AbstractSiglum
     public function getVerses(): array
     {
         $flatVerses = [];
-        for ($i = $this->verseStart; $i <= $this->verseEnd; $i++) {
+        $start = (int)$this->verseStart;
+        $end = (int)$this->verseEnd;
+        for ($i = $start; $i <= $end; $i++) {
             $flatVerses[] = new AbstractSiglum($this->book, $this->chapter, (string)$i, (string)$i);
         }
         return $flatVerses;
