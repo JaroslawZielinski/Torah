@@ -28,8 +28,8 @@ interface RepositoryInterface
     /**
      * @throws \Exception
      */
-    public function search(string $search, string $translation, int $caseSensitive = self::SEARCH_MODE_CASEINSENSITIVE)
-    : array;
+    public function search(string $search, string $translation, ?string $search2 = null,
+        int $caseSensitive = self::SEARCH_MODE_CASEINSENSITIVE): array;
 
     /**
      */
