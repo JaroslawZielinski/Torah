@@ -25,7 +25,6 @@ class Repository implements RepositoryInterface
         $this->connection = null;
     }
 
-
     /**
      * @inheritDoc
      */
@@ -62,7 +61,11 @@ EOT;
     /**
      * @inheritDoc
      */
-    public function search(string $search, string $translation, int $caseSensitive = self::SEARCH_MODE_CASEINSENSITIVE): array
+    public function search(
+        string $search,
+        string $translation,
+        ?string $search2 = null,
+        int $caseSensitive = self::SEARCH_MODE_CASEINSENSITIVE): array
     {
         $resourceName = $this->getResourceName($translation);
         $dB = $this->getConnection($resourceName);
@@ -75,6 +78,13 @@ EOT;
                     new \Zend_Db_Expr("LOWER('%{$search}%')"),
                     'LIKE'
                 );
+                if (!empty($search2)) {
+                    $dB->where(
+                        new \Zend_Db_Expr("LOWER({$field})"),
+                        new \Zend_Db_Expr("LOWER('%{$search2}%')"),
+                        'LIKE'
+                    );
+                }
                 break;
             case self::SEARCH_MODE_CASESENSITIVE:
                 $dB->where(
@@ -87,12 +97,23 @@ EOT;
                     new \Zend_Db_Expr("'%' || hex('{$search}') || '%'"),
                     'LIKE'
                 );
+                if (!empty($search2)) {
+                    $dB->where(
+                        new \Zend_Db_Expr("{$field}"),
+                        new \Zend_Db_Expr("'%{$search2}%'"),
+                        'LIKE'
+                    );
+                    $dB->where(
+                        new \Zend_Db_Expr("hex({$field})"),
+                        new \Zend_Db_Expr("'%' || hex('{$search2}') || '%'"),
+                        'LIKE'
+                    );
+                }
                 break;
         }
         $result = $dB->items($resourceName);
         return $result;
     }
-
 
     /**
      * @inheritDoc
