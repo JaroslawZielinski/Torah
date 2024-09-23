@@ -8,7 +8,7 @@ use JaroslawZielinski\Torah\Bible\Torah\AbstractSiglum;
 use SQLite3DB;
 
 class Repository implements RepositoryInterface
-{   
+{
     private const SIGLUM = '%s/%s/%s';
 
     private const DB_FILE_PATH = '/Resources/dbs/';
@@ -25,12 +25,12 @@ class Repository implements RepositoryInterface
         $this->connection = null;
     }
 
-        
+
     /**
      * @inheritDoc
      */
     public function createTable(string $table): void
-    {   
+    {
         $resourceName = $this->getResourceName($table);
         $query = <<<EOT
 CREATE TABLE IF NOT EXISTS {$resourceName} (
@@ -51,12 +51,46 @@ EOT;
         $verse = $siglum->getVerseStart();
         if (!$siglum->isSingle()) {
             throw new \Exception('It is not a single verse.');
-        } 
+        }
         $resourceName = $this->getResourceName($translation);
         $dB = $this->getConnection($resourceName);
         $dB->where('siglum', sprintf(self::SIGLUM, $siglum->getBook(), $siglum->getChapter(), $verse));
         $result = $dB->detail($resourceName);
         return $result['content'] ?? null;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function search(string $search, string $translation, int $caseSensitive = self::SEARCH_MODE_CASEINSENSITIVE): array
+    {
+        $resourceName = $this->getResourceName($translation);
+        $dB = $this->getConnection($resourceName);
+        $field = 'content';
+        switch ($caseSensitive) {
+            default:
+            case self::SEARCH_MODE_CASEINSENSITIVE:
+                $dB->where(
+                    new \Zend_Db_Expr("LOWER({$field})"),
+                    new \Zend_Db_Expr("LOWER('%{$search}%')"),
+                    'LIKE'
+                );
+                break;
+            case self::SEARCH_MODE_CASESENSITIVE:
+                $dB->where(
+                    new \Zend_Db_Expr("{$field}"),
+                    new \Zend_Db_Expr("'%{$search}%'"),
+                    'LIKE'
+                );
+                $dB->where(
+                    new \Zend_Db_Expr("hex({$field})"),
+                    new \Zend_Db_Expr("'%' || hex('{$search}') || '%'"),
+                    'LIKE'
+                );
+                break;
+        }
+        $result = $dB->items($resourceName);
+        return $result;
     }
 
 
@@ -73,7 +107,7 @@ EOT;
         ]);
         return !empty($lastRowId) ? $lastRowId : null;
     }
-    
+
     /**
      * @inheritDoc
      */
@@ -100,7 +134,7 @@ EOT;
      */
     private function getConnection(string $table): SQLite3DB
     {
-        $this->connection = new SQLite3DB(__DIR__ . '/../../../Translations' 
+        $this->connection = new SQLite3DB(__DIR__ . '/../../../Translations'
                 . self::DB_FILE_PATH . $table);
         return $this->connection;
     }
