@@ -118,15 +118,20 @@ class Torah
     /**
      * @throws \Exception
      */
-    public function getTextBySiglum(Siglum $siglum, string $language = self::LANGUAGE_PL): ?Text
-    {
+    public function getTextBySiglum(
+        Siglum $siglum,
+        string $language = self::LANGUAGE_PL,
+        int $contextUp = 0,
+        int $contextDown = 0
+    ): ?Text {
         $translationCode = $siglum->getTranslation();
         $translation = $this->getResourceByTranslationCode($translationCode);
-        if ($this->isValid($siglum, $translation, $language)) {
+        $newSiglum = $this->getExtendedSiglumByContext($siglum, $translation, $language, $contextUp, $contextDown);
+        if ($this->isValid($newSiglum, $translation, $language)) {
             if (count($this->getErrors()) > 0) {
                 return null;
             }
-            return $translation->get($siglum, $language, $this->options);
+            return $translation->get($newSiglum, $language, $this->options);
         }
         return null;
     }
@@ -149,5 +154,34 @@ class Torah
         $translationCode = $siglum->getTranslation();
         $translation = $this->getResourceByTranslationCode($translationCode);
         return $translation->getSingleSigleBySiglum($siglum);
+    }
+
+    /**
+     */
+    protected function getExtendedSiglumByContext(
+        Siglum $siglum,
+        Resources $translation,
+        string $language,
+        int $contextUp,
+        int $contextDown
+    ): Siglum {
+        if ($this->isValid($siglum, $translation, $language)) {
+            $books = $this->torahValidator->getBook($siglum, $translation);
+            $verseMax = $books['chapters'][$siglum->getChapter()];
+            $oldVerseStart = $siglum->getVerseStart();
+            $newVerseStart = $oldVerseStart - $contextDown;
+            $newVerseStart = $newVerseStart >= 1 ? $newVerseStart : 1;
+            $oldVerseEnd = $siglum->getVerseEnd();
+            $newVerseEnd = $oldVerseEnd + $contextUp;
+            $newVerseEnd = $newVerseEnd <= $verseMax ? $newVerseEnd : $verseMax;
+            return new Siglum(
+                $siglum->getTranslation(),
+                $siglum->getBook(),
+                $siglum->getChapter(),
+                (string)$newVerseStart,
+                (string)$newVerseEnd
+            );
+        }
+        return $siglum;
     }
 }
