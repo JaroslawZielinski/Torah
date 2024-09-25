@@ -10,19 +10,24 @@ class AbstractSiglum
      * @var string
      */
     protected $book;
+
     /**
      * @var string
      */
     protected $chapter;
+
     /**
      * @var string
      */
     protected $verseStart;
+
     /**
      * @var string
      */
     protected $verseEnd;
 
+    /**
+     */
     public function __construct(
         string $book,
         string $chapter,
@@ -84,5 +89,13 @@ class AbstractSiglum
             $flatVerses[] = new AbstractSiglum($this->book, $this->chapter, (string)$i, (string)$i);
         }
         return $flatVerses;
+    }
+
+    public function __toString(): string
+    {
+        if ($this->verseStart === $this->verseEnd) {
+            return sprintf('%s/%s/%s', $this->book, $this->chapter, $this->verseStart);
+        }
+        return sprintf('%s/%s/%s-%s', $this->book, $this->chapter, $this->verseStart, $this->verseEnd);
     }
 }

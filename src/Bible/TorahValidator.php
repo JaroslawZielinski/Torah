@@ -225,4 +225,27 @@ class TorahValidator
         }
         return $result;
     }
+
+    public function getBook(AbstractSiglum $siglum, Resources $translation): array
+    {
+        $bookName = $siglum->getBook();
+        $isProto = in_array($bookName, self::TANAKH_PROTO);
+        $isProtoN = in_array($bookName, self::NEVIIMKETUVIM_PROTO);
+        $isDeutero = in_array($bookName, self::TANAKH_DEUTERO);
+        $isDeuteroN = in_array($bookName, self::NEVIIMKETUVIM_DEUTERO);
+        $isTanakh = $isProto || $isDeutero;
+        $isNeviimKetuvim = $isProtoN || $isDeuteroN;
+        $isBritHadasha = in_array($bookName, self::BRIT_HADASHA);
+        $tanakh = $translation->getTanakh();
+        $neviimKetuvim = $translation->getNeviimKetuvim();
+        $britHadasha = $translation->getBritHadasha();
+        switch (true) {
+            case $isTanakh:
+                return $tanakh[$bookName];
+            case $isNeviimKetuvim:
+                return $neviimKetuvim[$bookName];
+            case $isBritHadasha:
+                return $britHadasha[$bookName];
+        }
+    }
 }

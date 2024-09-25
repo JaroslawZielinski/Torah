@@ -32,4 +32,13 @@ class Siglum extends AbstractSiglum
     {
         return $this->translation;
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function __toString(): string
+    {
+        $abstractSiglum = parent::__toString();
+        return sprintf('%s/%s', $this->translation, $abstractSiglum);
+    }
 }

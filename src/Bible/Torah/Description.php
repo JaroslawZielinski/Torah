@@ -58,4 +58,9 @@ class Description
             $translationDescription
         );
     }
+
+    public function getSigla(): AbstractSiglum
+    {
+        return $this->sigla;
+    }
 }

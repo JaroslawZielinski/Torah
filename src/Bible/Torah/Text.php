@@ -14,11 +14,14 @@ class Text
      * @var string
      */
     private $unOrdered;
+
     /**
      * @var Description
      */
     private $description;
 
+    /**
+     */
     public function __construct(string $ordered, string $unOrdered, Description $description)
     {
         $this->ordered = $ordered;
@@ -48,5 +51,10 @@ class Text
     public function getDescription(): string
     {
         return (string)$this->description;
+    }
+
+    public function getSigla(): AbstractSiglum
+    {
+        return $this->description->getSigla();
     }
 }
