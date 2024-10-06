@@ -10,7 +10,7 @@ use JaroslawZielinski\Torah\Bible\Torah\Text;
 
 class Response
 {
-    private const ORDERED_VERSE = '(%s) %s';
+    public const ORDERED_VERSE = '(%s) %s';
 
     /**
      * @var Text
