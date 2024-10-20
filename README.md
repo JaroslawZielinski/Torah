@@ -202,7 +202,7 @@ $torah = new Torah(
     new Service($onlineClient, $offlineClient),
     $options
 );
-$text = $torah->getTextBySiglum($siglum, Torah::LANGUAGE_EN);
+$text = $torah->getTextBySiglum($siglum, Torah::LANGUAGE_EN, $contextUp = 2, $contextDown = 3);
 if (!empty($text)) {
     echo $text->getOrdered() . '<br/><br/>';
     echo $text->getUnOrdered() . '<br/><br/>';
@@ -216,11 +216,11 @@ if (!empty($text)) {
 
 Output:
 ```text
-(21) He that hath my commandments, and keepeth them, he it is that loveth me: and he that loveth me shall be loved of my Father, and I will love him, and will manifest myself to him. (22) Judas saith unto him, not Iscariot, Lord, how is it that thou wilt manifest thyself unto us, and not unto the world? (23) Jesus answered and said unto him, If a man love me, he will keep my words: and my Father will love him, and we will come unto him, and make our abode with him. (24) He that loveth me not keepeth not my sayings: and the word which ye hear is not mine, but the Father's which sent me.
+(18) I will not leave you comfortless: I will come to you. (19) Yet a little while, and the world seeth me no more; but ye see me: because I live, ye shall live also. (20) At that day ye shall know that I [am] in my Father, and ye in me, and I in you. (21) He that hath my commandments, and keepeth them, he it is that loveth me: and he that loveth me shall be loved of my Father, and I will love him, and will manifest myself to him. (22) Judas saith unto him, not Iscariot, Lord, how is it that thou wilt manifest thyself unto us, and not unto the world? (23) Jesus answered and said unto him, If a man love me, he will keep my words: and my Father will love him, and we will come unto him, and make our abode with him. (24) He that loveth me not keepeth not my sayings: and the word which ye hear is not mine, but the Father's which sent me. (25) These things have I spoken unto you, being [yet] present with you. (26) But the Comforter, [which is] the Holy Ghost, whom the Father will send in my name, he shall teach you all things, and bring all things to your remembrance, whatsoever I have said unto you.
 
-He that hath my commandments, and keepeth them, he it is that loveth me: and he that loveth me shall be loved of my Father, and I will love him, and will manifest myself to him. Judas saith unto him, not Iscariot, Lord, how is it that thou wilt manifest thyself unto us, and not unto the world? Jesus answered and said unto him, If a man love me, he will keep my words: and my Father will love him, and we will come unto him, and make our abode with him. He that loveth me not keepeth not my sayings: and the word which ye hear is not mine, but the Father's which sent me.
+I will not leave you comfortless: I will come to you. Yet a little while, and the world seeth me no more; but ye see me: because I live, ye shall live also. At that day ye shall know that I [am] in my Father, and ye in me, and I in you. He that hath my commandments, and keepeth them, he it is that loveth me: and he that loveth me shall be loved of my Father, and I will love him, and will manifest myself to him. Judas saith unto him, not Iscariot, Lord, how is it that thou wilt manifest thyself unto us, and not unto the world? Jesus answered and said unto him, If a man love me, he will keep my words: and my Father will love him, and we will come unto him, and make our abode with him. He that loveth me not keepeth not my sayings: and the word which ye hear is not mine, but the Father's which sent me. These things have I spoken unto you, being [yet] present with you. But the Comforter, [which is] the Holy Ghost, whom the Father will send in my name, he shall teach you all things, and bring all things to your remembrance, whatsoever I have said unto you.
 
-John 14:21-24, King James Version
+John 14:18-26, King James Version
 ```
 
 ### Validate
