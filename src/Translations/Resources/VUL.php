@@ -312,7 +312,7 @@ class VUL extends Resources
                 ],
                 self::TORAH_BOOKS_ML => [
                     self::CHAPTERS => [
-                        '1' => 14, '2' => 17, '3' => 18
+                        '1' => 14, '2' => 17, '3' => 18, '4' => 6
                     ]
                 ]
             ],
@@ -582,6 +582,6 @@ class VUL extends Resources
      */
     public function getMaxVerse(): int
     {
-        return 30844;
+        return 30850;
     }
 }

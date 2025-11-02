@@ -313,7 +313,7 @@ class UG extends Resources
                 ],
                 self::TORAH_BOOKS_ML => [
                     self::CHAPTERS => [
-                        '1' => 14, '2' => 17, '3' => 18
+                        '1' => 14, '2' => 17, '3' => 18, '4' => 5
                     ]
                 ]
             ],
@@ -479,6 +479,6 @@ class UG extends Resources
      */
     public function getMaxVerse(): int
     {
-        return 31000;
+        return 31005;
     }
 }
